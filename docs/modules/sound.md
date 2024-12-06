@@ -69,4 +69,5 @@ Sound.resume(audio);
 
 <br />
 ```js
-Sound.deinit()```
+Sound.deinit();
+```

@@ -25,7 +25,7 @@ const config: Config = {
         docs: {
           sidebarPath: './sidebars.ts',
           editUrl: ({ docPath }) =>
-            `https://github.com/DanielAbrante/athena-env-website/docs/${docPath}`,
+            `https://github.com/DanielAbrante/athena-env-website/tree/main/docs/${docPath}`,
         },
         theme: {
           customCss: './src/css/custom.css',

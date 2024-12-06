@@ -1,10 +1,14 @@
 .heroBanner {
   text-align: center;
-  padding-block: 10rem;
-}
+  padding-block: 12rem;
 
-@media (width <= 768px) {
-  .heroBanner {
-    padding: 2rem;
+  p {
+    @media (width <= 430px) {
+      padding-inline: 3rem;
+    }
+
+    @media (width <= 360px) {
+      padding-inline: 2rem;
+    }
   }
 }
