@@ -7,7 +7,7 @@ const config: Config = {
   tagline: 'Enhanced JavaScript environment for PlayStation 2™',
   favicon: 'img/light_logo.svg',
 
-  url: '',
+  url: 'https://athena-env.vercel.app',
   baseUrl: '/',
 
   onBrokenLinks: 'throw',
