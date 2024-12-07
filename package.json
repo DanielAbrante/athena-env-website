@@ -12,6 +12,7 @@
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
     "build": "docusaurus build",
+    "format": "npx @biomejs/biome check --fix src",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
     "serve": "docusaurus serve",
@@ -28,9 +29,11 @@
     "react-dom": "^18.0.0"
   },
   "devDependencies": {
+    "@biomejs/biome": "1.9.4",
     "@docusaurus/module-type-aliases": "^3.6.1",
     "@docusaurus/tsconfig": "^3.6.1",
     "@docusaurus/types": "^3.6.1",
+    "husky": "^9.1.7",
     "typescript": "~5.5.2"
   },
   "browserslist": {

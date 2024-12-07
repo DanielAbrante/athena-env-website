@@ -1,15 +1,15 @@
 .features {
-  padding-block: 6rem;
+	padding-block: 6rem;
 }
 
 .featureIcon {
-  height: 6rem;
-  width: 6rem;
-  box-shadow: 2px 2px #000000;
-  padding: 1rem;
-  border-radius: 16px;
+	height: 6rem;
+	width: 6rem;
+	box-shadow: 2px 2px #000000;
+	padding: 1rem;
+	border-radius: 16px;
 }
 
-[data-theme='dark'] .featureIcon {
-  filter: invert(1);
+[data-theme="dark"] .featureIcon {
+	filter: invert(1);
 }
