@@ -33,3 +33,39 @@
 .hero__subtitle {
 	color: #ffffff;
 }
+
+.navbar--social-icon {
+	width: 2rem;
+	height: 2rem;
+	padding: 6px;
+	margin-right: 6px;
+	border-radius: 50%;
+	transition: background var(--ifm-transition-fast);
+
+	&:hover {
+		background: var(--ifm-color-emphasis-200);
+	}
+
+	&:before {
+		display: block;
+		content: "";
+		height: 100%;
+		width: 100%;
+	}
+
+	@media (width <= 996px) {
+		margin-left: 6px;
+	}
+}
+
+.navbar--discord-link:before {
+	background: url("/img/social/discord.svg") no-repeat;
+}
+
+.navbar--github-link:before {
+	background: url("/img/social/github-dark.svg") no-repeat;
+}
+
+html[data-theme="dark"] .navbar--github-link:before {
+	background: url("/img/social/github-light.svg") no-repeat;
+}
