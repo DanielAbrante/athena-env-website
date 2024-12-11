@@ -2,63 +2,74 @@
 
 ## Methods
 
+### new
+
+Returns a color object from the specified RGB(A) parameters.
+
 ```js
 Color.new(r, g, b, a?);
 ```
-Returns a color object from the specified RGB(A) parameters.
-<br />
 
-```js
-Color.getR(color);
-```
+### getR
 
 Get red intensity of the color.
-<br />
 
 ```js
-Color.getG(color);
+Color.getR(col);
 ```
+
+### getG
 
 Get green intensity of the color.
-<br />
 
 ```js
-Color.getB(color);
+Color.getG(col);
 ```
+
+### getB
 
 Get blue intensity of the color.
-<br />
 
 ```js
-Color.getA(color);
+Color.getB(col);
 ```
+
+### getA
 
 Get alpha intensity of the color.
-<br />
 
 ```js
-Color.setR(color, r);
+Color.getA(col);
 ```
+
+### setR
 
 Set red intensity of the color.
-<br />
 
 ```js
-Color.setG(color, g);
+Color.setR(col, r);
 ```
+
+### setG
 
 Set green intensity of the color.
-<br />
 
 ```js
-Color.setB(color, b);
+Color.setG(col, g);
 ```
+
+### setB
 
 Set blue intensity of the color.
-<br />
 
 ```js
-Color.setA(color, a);
+Color.setB(col, b);
 ```
 
+### setA
+
 Set alpha intensity of the color.
+
+```js
+Color.setA(col, a);
+```

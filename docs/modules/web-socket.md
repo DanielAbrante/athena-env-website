@@ -12,16 +12,18 @@ const socket = new WebSocket("wss://example.com");
 
 ## Methods
 
+### send
+
+Send data with Buffer
+
 ```js
 send(data);
 ```
 
-Send data with Buffer
-<br />
+### recv
 
+Receive data to a buffer
 
 ```js
 recv();
 ```
-
-Receive data to a buffer

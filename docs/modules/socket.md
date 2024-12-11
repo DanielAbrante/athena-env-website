@@ -5,39 +5,50 @@ Well, sockets.
 ## Construction  
 
 ```js
-new Socket(domain, type);
+const s = new Socket(domain, type);
 ```
+
 ```js
-const socket = new Socket(AF_INET, SOCK_STREAM);
+const s = new Socket(AF_INET, SOCK_STREAM);
 ```
 
 ## Methods
+
+### connect
 
 ```js
 connect(host, port);
 ```
 
+### bind
+
 ```js
 bind(host, port);
 ```
+
+### listen
 
 ```js
 listen();
 ```
 
+### send
+
+Send data with Buffer
+
 ```js
 send(data);
 ```
 
-Send data with Buffer
-<br />
+### recv
+
+Receive data to a buffer
 
 ```js
 recv(size);
 ```
 
-Receive data to a buffer
-<br />
+### close
 
 ```js
 close();

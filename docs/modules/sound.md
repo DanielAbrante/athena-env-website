@@ -4,61 +4,65 @@ Sound Methods, supporting WAV, OGG and ADPCM.
 
 ## Methods
 
+### setVolume
+
 ```js
 Sound.setVolume(volume, slot?);
 ```
 
 *If slot is specified, it will change ADPCM slot volume, else it will change master volume.
-<br />
 
+### load
 
 ```js
 const audio = Sound.load(path);
 ```
 
+### play
 
 ```js
 Sound.play(audio, slot?);
 ```
 
 *ADPCM: If slot isn't specified, it will use 0.
-<br />
 
+### free
 
 ```js
 Sound.free(audio);
 ```
 
-<br />
+### isPlaying
 
 ```js
 const playing = Sound.isPlaying();
 ```
 
 *Doesn't apply for ADPCM
-<br />
 
+### duration
 
 ```js
 const msec = Sound.duration();
 ```
-<br />
+
+### repeat
 
 ```js
 Sound.repeat(false);
 ```
 
 *Doesn't apply for ADPCM
-<br />
 
+### pause
 
 ```js
 Sound.pause(audio);
 ```
 
 *Doesn't apply for ADPCM
-<br />
 
+### resume
 
 ```js
 Sound.resume(audio);
@@ -66,8 +70,8 @@ Sound.resume(audio);
 
 *Doesn't apply for ADPCM
 
+### deinit
 
-<br />
 ```js
 Sound.deinit();
 ```

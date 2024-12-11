@@ -12,55 +12,67 @@ const model = new RenderObject(mesh, texture?);
 - If you don't have a MTL file but you want to bind a texture on it, just pass the image as a second argument if you want to use it. 
 :::
 
+## Properties
+
+### vertices
+
+A Render.vertex array that can be modified and read.
+
+### size
+
+Vertex quantity.
+
 ## Methods
+
+## draw
+
+Draws the object on screen.
 
 ```js
 draw(pos_x, pos_y, pos_z, rot_x, rot_y, rot_z);
 ```
 
-Draws the object on screen.
-<br />
+## drawBounds
 
+Draws object bounding box.
 
 ```js
 drawBounds(pos_x, pos_y, pos_z, rot_x, rot_y, rot_z);
 ```
 
-Draws object bounding box.
-<br />
+## getTexture
 
+Gets the nth texture object from the model.
 
 ```js
 getTexture(id);
 ```
 
-Gets the nth texture object from the model.
-<br />
+## setTexture
 
+Changes or sets the nth texture on models.
 
 ```js
 setTexture(id, texture, range?);
 ```
 
-Changes or sets the nth texture on models.
-<br />
+## getPipeline
 
+Returns the current rendering pipeline loaded for the model.
 
 ```js
 getPipeline();
 ```
 
-Returns the current rendering pipeline loaded for the model.
-<br />
+## setPipeline
 
+Sets the current pipeline for the model. 
 
 ```js
 setPipeline(pipeline);
 ```
 
-Sets the current pipeline for the model. 
-
-**Available pipelines**
+### Available pipelines
 
 - **Render.PL_NO_LIGHTS_COLORS:** Colors and lights disabled.
 - **Render.PL_NO_LIGHTS_COLORS_TEX:** Colors, lights and textures disabled.
@@ -69,36 +81,33 @@ Sets the current pipeline for the model.
 - **Render.PL_DEFAULT:** Default for textured models. Lights and colors enabled.
 - **Render.PL_DEFAULT_NO_TEX:** Default for non-textured models. Lights and colors enabled.
   
-## Properties
-
-```vertices```
-
-A Render.vertex array that can be modified and read.
-
-```size```
-
-Vertex quantity.
-  
 ## Camera
+
+### Methods
+
+#### position
 
 ```js
 Camera.position(x, y, z);
 ```
 
+#### rotation
+
 ```js
 Camera.rotation(x, y, z);
 ```
-
 
 ## Lights
 
 You have 4 lights to use in 3D scenes, use set to configure them.
 
+### set
+
 ```js
 Lights.set(id, attribute, x, y, z);
 ```
 
-**Avaiable light attributes**
+#### Available light attributes
 
 - Lights.DIRECTION
 - Lights.AMBIENT

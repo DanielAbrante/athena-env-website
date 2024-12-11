@@ -4,69 +4,73 @@ Basic USB mouse support.
 
 ## Methods
 
+### init
+
+Initialize mouse routines.
+
 ```js
 Mouse.init();
 ```
 
-Initialize mouse routines.
-<br />
+### get
 
+Returns mouse actual properties on the object format below:
 
 ```js
 const mouse = Mouse.get();
 ```
 
-Returns mouse actual properties on the object format below:
+#### Properties
 
 - mouse.x
 - mouse.y
 - mouse.wheel
 - mouse.buttons
-<br />
 
+### setBoundary
+
+Set mouse x and y bounds.
 
 ```js
 Mouse.setBoundary(minX, maxX, minY, maxY);
 ```
 
-Set mouse x and y bounds.
-<br />
+### getMode
 
+Get mouse mode (absolute or relative).
 
 ```js
 const mode = Mouse.getMode();
 ```
 
-Get mouse mode (absolute or relative).
-<br />
+### setMode
 
+Set mouse mode.
 
 ```js
 Mouse.setMode(mode);
 ```
 
-Set mouse mode.
-<br />
+### getAccel
 
+Get mouse acceleration.
 
 ```js
 const acceleration = Mouse.getAccel();
 ```
 
-Get mouse acceleration.
-<br />
+### setAccel
 
+Set mouse acceleration.
 
 ```js
 Mouse.setAccel(val);
 ```
 
-Set mouse acceleration.
-<br />
+### setPosition
 
+Set mouse pointer position.
 
 ```js
 Mouse.setPosition(x, y);
 ```
-
-Set mouse pointer position.
