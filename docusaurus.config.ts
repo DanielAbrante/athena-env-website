@@ -15,8 +15,20 @@ const config: Config = {
 
 	i18n: {
 		defaultLocale: "en",
-		locales: ["en", "pt"],
+		locales: ["en"],
 	},
+
+	themes: [
+		[
+			require.resolve("@easyops-cn/docusaurus-search-local"),
+			/** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
+			({
+				indexBlog: false,
+				indexPages: false,
+				hashed: true,
+			}),
+		],
+	],
 
 	presets: [
 		[
