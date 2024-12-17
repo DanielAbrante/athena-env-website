@@ -5,7 +5,7 @@ export type FeatureItem = {
 	description: string;
 };
 
-export const FeatureList: FeatureItem[] = [
+export const featuresList: FeatureItem[] = [
 	{
 		id: 0,
 		title: "Easy to Use",
