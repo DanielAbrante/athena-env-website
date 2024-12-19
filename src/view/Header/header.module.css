@@ -25,6 +25,7 @@
 	object-fit: cover;
 	filter: brightness(0.5);
 	z-index: -1;
+	animation: slide 10s infinite linear;
 
 	@media (width <= 430px) {
 		filter: brightness(0.4);

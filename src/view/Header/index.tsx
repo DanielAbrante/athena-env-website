@@ -12,13 +12,13 @@ export function Header() {
 	const [currentBannerIndex, setCurrentBannerIndex] = useState<number>(0);
 
 	useEffect(() => {
-		const transitionTime = 10000;
+		const bannerTransitionTime = 10000;
 
 		const switchBanner = setInterval(() => {
 			setCurrentBannerIndex((prevBanner) =>
 				prevBanner === games.length - 1 ? 0 : prevBanner + 1,
 			);
-		}, transitionTime);
+		}, bannerTransitionTime);
 
 		return () => clearInterval(switchBanner);
 	}, []);
