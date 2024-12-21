@@ -12,7 +12,7 @@ export function Header() {
 	const [currentBannerIndex, setCurrentBannerIndex] = useState<number>(0);
 
 	useEffect(() => {
-		const bannerTransitionTime = 10000;
+		const bannerTransitionTime = 5000;
 
 		const switchBanner = setInterval(() => {
 			setCurrentBannerIndex((prevBanner) =>

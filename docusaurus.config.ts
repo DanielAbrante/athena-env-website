@@ -80,7 +80,7 @@ const config: Config = {
 		},
 		footer: {
 			style: "dark",
-			copyright: `AthenaEnv website was created by <a href="https://github.com/DanielAbrante" target='_blank'>Daniel Abrante</a>`,
+			copyright: `AthenaEnv website was created by <a href="https://github.com/DanielAbrante" target='_blank'>Daniel Abrante</a> | © ${new Date().getFullYear()}`,
 			links: [
 				{
 					title: "Docs",
@@ -131,6 +131,7 @@ const config: Config = {
 		prism: {
 			theme: prismThemes.github,
 			darkTheme: prismThemes.dracula,
+			additionalLanguages: ['bash']
 		},
 	} satisfies Preset.ThemeConfig,
 };
