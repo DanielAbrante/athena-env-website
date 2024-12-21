@@ -4,40 +4,42 @@ Basic USB keyboard support.
 
 ## Methods
 
+### init
+
+Initialize keyboard routines.
+
 ```js
 Keyboard.init();
 ```
 
-Initialize keyboard routines.
-<br />
+### get
 
+Get keyboard current char.
 
 ```js
 const char = Keyboard.get();
 ```
 
-Get keyboard current char.
-<br />
+### setRepeatRate
 
+Set keyboard repeat rate.
 
 ```js
 Keyboard.setRepeatRate(ms);
 ```
 
-Set keyboard repeat rate.
-<br />
+### setBlockingMode
 
+Sets keyboard to block(or not) the thread waiting for the next key to be pressed.
 
 ```js
 Keyboard.setBlockingMode(mode);
 ```
 
-Sets keyboard to block(or not) the thread waiting for the next key to be pressed.
-<br />
+### deinit
 
+Destroy keyboard routines.
 
 ```js
 Keyboard.deinit();
 ```
-
-Destroy keyboard routines.

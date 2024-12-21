@@ -1,18 +1,14 @@
 {
-  "extends": "@docusaurus/tsconfig",
-  "compilerOptions": {
-    "baseUrl": ".",
-    "resolveJsonModule": true,
-    "moduleDetection": "force",
-    "isolatedModules": true,
-    "verbatimModuleSyntax": true,
-    "strict": true,
-    "noUncheckedIndexedAccess": true,
-    "noImplicitOverride": true,
-    "lib": [
-      "ES2022",
-      "DOM",
-      "DOM.Iterable"
-    ]
-  }
+	"extends": "@docusaurus/tsconfig",
+	"compilerOptions": {
+		"baseUrl": ".",
+		"resolveJsonModule": true,
+		"moduleDetection": "force",
+		"isolatedModules": true,
+		"verbatimModuleSyntax": true,
+		"strict": true,
+		"noUncheckedIndexedAccess": true,
+		"noImplicitOverride": true,
+		"lib": ["ES2022", "DOM", "DOM.Iterable"]
+	}
 }

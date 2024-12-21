@@ -1,3 +1,7 @@
+---
+sidebar_position: 3
+---
+
 # Error Report System
 
 Athena has a consistent error system, which is capable of pointing the error type, custom message, files, lines and it even has

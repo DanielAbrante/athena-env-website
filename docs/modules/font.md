@@ -20,25 +20,28 @@ const font = new Font("Segoe UI.ttf");  // Load trueType font
 
 ## Properties
 
-```color```
+### color
 
 Define font tinting, default value is Color.new(255, 255, 255, 128).
 
-```scale```
+### scale
 
 Proportional scale, default: 1.0f
 
 ## Methods
 
+### print
+
+Draw text on screen(call it every frame). Example: font.print(10.0, 10.0, "Hello world!);
+
 ```js
 print(x, y, text);
 ```
 
-Draw text on screen(call it every frame). Example: font.print(10.0, 10.0, "Hello world!);
-<br />
+### getTextSize
+
+Returns text absolute size in pixels (width, height). Example: const size = font.getTextSize("Hello world!");
 
 ```js
 getTextSize(text);
 ```
-
-Returns text absolute size in pixels (width, height). Example: const size = font.getTextSize("Hello world!");

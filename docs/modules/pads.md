@@ -17,62 +17,56 @@ Above being able to draw and everything else, A human interface is important. Su
 
 ## Methods
 
+### get
+
+Returns a pad object
+
 ```js
 const pad = Pads.get(port?);
 ```
 
-Returns a pad object:
+#### Properties
 
 - **pad.btns:** Button state on the current check.  
-
-
 - **pad.old_btns:** Button state on the last check.  
-
-
 - **pad.lx:** Left analog horizontal position (left = -127, default = 0, right = 128).  
-
-
 - **pad.ly:** Left analog vertical position (up = -127, default = 0, down = 128).  
-
-
-- **pad.rx:** Right analog horizontal position (left = -127, default = 0, right = 128).  
-
-
+- **pad.rx:** Right analog horizontal position (left = -127, default = 0, right = 128).     
 - **pad.ry:** Right analog vertical position (up = -127, default = 0, down = 128).  
 
-<br />
+### update 
+
+Updates all pads pressed and stick positions data.  
 
 ```js
 update();
 ```
 
-Updates all pads pressed and stick positions data.  
-<br />
+### pressed 
 
+Checks if a button is being pressed (continuously).  
 
 ```js
 pressed(button);
 ```
 
-Checks if a button is being pressed (continuously).  
-<br />
+### justPressed 
 
+Checks if a button was pressed only once.  
 
 ```js
 justPressed(button);
 ```
 
-Checks if a button was pressed only once.  
-<br />
+### setEventHandler 
 
+Sets the pad object to listen events defined by Pads.newEvent, so it doesn't need to be updated.  
 
 ```js
 setEventHandler();
 ```
 
-Sets the pad object to listen events defined by Pads.newEvent, so it doesn't need to be updated.  
-<br />
-
+### newEvent
   
 ```js 
 const event_id = Pads.newEvent(button, kind, function);
@@ -84,46 +78,45 @@ Remember to set the pad object event handler first!
 :::
 
 :::info[Pad Events]
-- Pads.DIGITAL  
-- Pads.ANALOG  
-- Pads.DUALSHOCK  
-:::
-
-<br />
-
-```js
-Pads.deleteEvent(event_id);
-```
-
-Deletes the event created by Pads.newEvent.
-<br />
-
-
-```js 
-const type = Pads.getType(port?);
-```
-
-Gets gamepad type in the specified port.
-
-:::info[Pad Types]
 - Pads.PRESSED  
 - Pads.JUST_PRESSED  
 - Pads.NON_PRESSED
 :::
 
-<br />
+### deleteEvent
 
+Deletes the event created by Pads.newEvent.
+
+```js
+Pads.deleteEvent(event_id);
+```
+
+### getType
+
+Gets gamepad type in the specified port.
+
+```js 
+const type = Pads.getType(port?);
+```
+
+:::info[Pad Types]
+- Pads.DIGITAL  
+- Pads.ANALOG  
+- Pads.DUALSHOCK
+:::
+
+### getPressure 
+
+Get button pressure level.
 
 ```js
 const press = Pads.getPressure(port?, button);
 ```
 
-Get button pressure level.
-<br />
+### rumble
 
+Rumble your gamepad.
 
 ```js
 Pads.rumble(port, big, small);
 ```
-
-Rumble your gamepad.

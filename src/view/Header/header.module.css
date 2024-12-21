@@ -1,0 +1,72 @@
+.heroBanner {
+	text-align: center;
+	padding-block: 12rem;
+	position: relative;
+	background: transparent;
+	height: calc(70vh);
+
+	p {
+		@media (width <= 430px) {
+			padding-inline: 3rem;
+		}
+
+		@media (width <= 360px) {
+			padding-inline: 2rem;
+		}
+	}
+}
+
+.heroBannerImage {
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	filter: brightness(0.5);
+	z-index: -1;
+	animation: slide 10s infinite linear;
+
+	@media (width <= 430px) {
+		filter: brightness(0.4);
+		object-position: 10%;
+	}
+}
+
+.heroBannerImageInfo {
+	position: absolute;
+	bottom: 48px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	color: #fff;
+
+	@media (width <= 430px) {
+		left: 24px;
+	}
+}
+
+.bannerSlide {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 24px;
+	display: flex;
+	gap: 24px;
+
+	button {
+		height: 16px;
+		width: 16px;
+		border-radius: 50%;
+		cursor: pointer;
+	}
+
+	@media (width <= 430px) {
+		left: 24;
+		bottom: 8px;
+	}
+}
+
+.bannerSelected {
+	background-color: #6080f5;
+}
