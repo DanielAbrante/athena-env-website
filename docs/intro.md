@@ -38,7 +38,7 @@ os.setInterval(() => { // Basically creates an infinite loop, similar to while t
   Screen.clear(); // Clear screen for the next frame.
   font.print(0, 0, "Hello World!"); // x, y, text
   Screen.flip(); // Updates the screen.
-}, 0)`
+}, 0)
 ```
 
 ## How to run it
