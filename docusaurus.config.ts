@@ -91,7 +91,7 @@ const config: Config = {
 						},
 						{
 							label: "Modules",
-							to: "/docs/category/modules",
+							to: "/docs/modules",
 						},
 						{
 							label: "Performance",
