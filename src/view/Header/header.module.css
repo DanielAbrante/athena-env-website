@@ -37,13 +37,19 @@
 	position: absolute;
 	bottom: 48px;
 	display: flex;
-	flex-direction: column;
 	align-items: flex-start;
+	flex-direction: column;
 	color: #fff;
 
 	@media (width <= 430px) {
 		left: 24px;
 	}
+}
+
+.loadingBar {
+	margin-top: 8px;
+	height: 2px;
+	background-color: var(--ifm-color-primary);
 }
 
 .bannerSlide {
