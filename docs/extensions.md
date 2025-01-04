@@ -52,6 +52,12 @@ const pcsx2_config = {
 }
 ```
 
+4. Open the ```main.js``` file and insert the line of code below at the beginning
+
+```js
+console.log("AthenaEnv Started");
+```
+
 3. Run the project
 ```sh
 node hot_reload.mjs
