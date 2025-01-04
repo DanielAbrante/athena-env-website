@@ -18,6 +18,16 @@ const config: Config = {
 		locales: ["en"],
 	},
 
+	headTags: [
+		{
+			tagName: "link",
+			attributes: {
+				rel: "preconnect",
+				href: "https://github.com/DanielSant0s/AthenaEnv",
+			},
+		},
+	],
+
 	themes: [
 		[
 			require.resolve("@easyops-cn/docusaurus-search-local"),
@@ -47,6 +57,14 @@ const config: Config = {
 	],
 
 	themeConfig: {
+		metadata: [
+			{
+				name: "description",
+				content: "Enhanced JavaScript environment for PlayStation 2™",
+			},
+			{ name: "keywords", content: "athenaenv, javascript, ps2, development" },
+			{ name: "author", content: "Daniel Abrante" },
+		],
 		colorMode: {
 			defaultMode: "dark",
 		},
@@ -91,7 +109,7 @@ const config: Config = {
 						},
 						{
 							label: "Modules",
-							to: "/docs/category/modules",
+							to: "/docs/modules",
 						},
 						{
 							label: "Performance",
@@ -131,7 +149,7 @@ const config: Config = {
 		prism: {
 			theme: prismThemes.github,
 			darkTheme: prismThemes.dracula,
-			additionalLanguages: ['bash']
+			additionalLanguages: ["bash"],
 		},
 	} satisfies Preset.ThemeConfig,
 };

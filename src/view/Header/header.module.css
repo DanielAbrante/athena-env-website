@@ -3,7 +3,7 @@
 	padding-block: 12rem;
 	position: relative;
 	background: transparent;
-	height: calc(70vh);
+	height: 60vh;
 
 	p {
 		@media (width <= 430px) {
@@ -14,6 +14,15 @@
 			padding-inline: 2rem;
 		}
 	}
+
+	@media (width < 1920px) {
+		height: 70vh;
+	}
+
+	@media (width <= 430px) {
+		padding-top: 6rem;
+		height: 80vh;
+	}
 }
 
 .heroBannerImage {
@@ -23,12 +32,11 @@
 	height: 100%;
 	width: 100%;
 	object-fit: cover;
-	filter: brightness(0.5);
+	filter: brightness(0.3);
 	z-index: -1;
 	animation: slide 10s infinite linear;
 
 	@media (width <= 430px) {
-		filter: brightness(0.4);
 		object-position: 10%;
 	}
 }
@@ -37,13 +45,19 @@
 	position: absolute;
 	bottom: 48px;
 	display: flex;
-	flex-direction: column;
 	align-items: flex-start;
+	flex-direction: column;
 	color: #fff;
 
 	@media (width <= 430px) {
 		left: 24px;
 	}
+}
+
+.loadingBar {
+	margin-top: 8px;
+	height: 2px;
+	background-color: var(--ifm-color-primary);
 }
 
 .bannerSlide {

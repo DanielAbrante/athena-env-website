@@ -38,7 +38,7 @@ os.setInterval(() => { // Basically creates an infinite loop, similar to while t
   Screen.clear(); // Clear screen for the next frame.
   font.print(0, 0, "Hello World!"); // x, y, text
   Screen.flip(); // Updates the screen.
-}, 0)`
+}, 0)
 ```
 
 ## How to run it
@@ -59,17 +59,3 @@ That's the default dashboard, coded in default main.js file. It searchs JavaScri
 ```
 Once it was found, it will appear on the dashboard app list.
 
-
-## Docs info
-
-Parameters followed by "?" (question mark) are optional, e.g.:
-
-```js
-Color.new(r, g, b, a?); 
-```
-
-Parameters followed by "=" (equal sign) are default values, e.g.:
-
-```js
-readAsString(max_size = undefined);
-```
