@@ -25,4 +25,9 @@ export const games: IGames[] = [
 		author: "DanielSant0s",
 		src: "img/banners/flappy-bird.webp",
 	},
+	{
+		title: "XMB Interface",
+		author: "Hiro Tex",
+		src: "img/banners/xmb-interface-orange.webp",
+	},
 ];
