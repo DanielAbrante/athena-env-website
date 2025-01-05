@@ -20,8 +20,11 @@ const find_game_window = [
     'search', '--name', `${pcsx2_config.elf_name} \\[\\?\\]`,
 ];
 
-const fastForward = () => spawn(command, [...find_game_window, 'key', 'ctrl+f']);
-const reload = () => spawn(command, [...find_game_window, 'key', 'j+k', 'ctrl+f']);
+const TOGGLE_TURBO_KEY = 'Tab';
+const RESET_VIRTUAL_MACHINE_KEY = 'alt+r';
+
+const fastForward = () => spawn(command, [...find_game_window, 'key', TOGGLE_TURBO_KEY]);
+const reload = () => spawn(command, [...find_game_window, 'key', RESET_VIRTUAL_MACHINE_KEY, TOGGLE_TURBO_KEY]);
 
 const ignored_folders = ['node_modules', 'assets', '@types', '.git'];
 const debounceTimers = {};
