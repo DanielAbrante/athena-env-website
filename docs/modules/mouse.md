@@ -20,7 +20,7 @@ Returns mouse actual properties on the object format below:
 const mouse = Mouse.get();
 ```
 
-#### Properties
+**Properties**:
 
 - mouse.x
 - mouse.y

@@ -14,11 +14,11 @@ const model = new RenderObject(mesh, texture?);
 
 ## Properties
 
-### vertices
+**vertices**
 
 A Render.vertex array that can be modified and read.
 
-### size
+**size**
 
 Vertex quantity.
 

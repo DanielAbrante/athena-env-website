@@ -20,11 +20,11 @@ const font = new Font("Segoe UI.ttf");  // Load trueType font
 
 ## Properties
 
-### color
+**color**
 
 Define font tinting, default value is Color.new(255, 255, 255, 128).
 
-### scale
+**scale**
 
 Proportional scale, default: 1.0f
 

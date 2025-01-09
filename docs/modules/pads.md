@@ -25,7 +25,7 @@ Returns a pad object
 const pad = Pads.get(port?);
 ```
 
-#### Properties
+**Properties**
 
 - **pad.btns:** Button state on the current check.  
 - **pad.old_btns:** Button state on the last check.  

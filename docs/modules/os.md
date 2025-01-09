@@ -13,7 +13,7 @@ The OS Methods usually return 0 if OK or an OS specific negative error code.
 
 ## Properties
 
-### os.platform
+**os.platform**
 
 Return a string representing the platform: "linux", "darwin", "win32", "ps2" or "js".
 

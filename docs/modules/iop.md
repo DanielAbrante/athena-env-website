@@ -4,55 +4,55 @@ The PlayStation 2 has an I/O processor to deal with drivers and modules. Take co
 
 ## Properties
 
-### IOP.keyboard
+**IOP.keyboard**
 
 USB Keyboard  
 
-### IOP.mouse
+**IOP.mouse**
 
 USB Mouse  
 
-### IOP.freeram
+**IOP.freeram**
 
 IOP RAM Info  
 
-### IOP.ds34bt
+**IOP.ds34bt**
 
 Bluetooth DualShock 3/4 pads  
 
-### IOP.ds34usb
+**IOP.ds34usb**
 
 USB DualShock 3/4 pads  
 
-### IOP.network
+**IOP.network**
 
 Network drivers  
 
-### IOP.pads
+**IOP.pads**
 
 DualShock 1/2 pads  
 
-### IOP.memcard
+**IOP.memcard**
 
 Memory Card  
 
-### IOP.audio
+**IOP.audio**
 
 Audio driver  
 
-### IOP.usb_mass
+**IOP.usb_mass**
 
 USB Mass storage, supports FAT32 and exFAT  
 
-### IOP.cdfs
+**IOP.cdfs**
 
 Disc driver  
 
-### IOP.hdd
+**IOP.hdd**
 
 Internal HDD driver  
 
-### IOP.boot_device
+**IOP.boot_device**
 
 Storage device used to boot Athena 
 
@@ -92,7 +92,7 @@ const stats = IOP.getMemoryStats();
 Requires IOP.loadDefaultModule(IOP.freeram) first! 
 :::
 
-#### Properties
+**Properties**:
 
 - stats.free
 - stats.used
