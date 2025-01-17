@@ -16,58 +16,45 @@ A collection of extensions to enhance development with AthenaEnv.
 [Mercury SM](https://github.com/GustavoFurtad2/MercurySM-AthenaPS2) | GustavoFurtad2      
 [Hot Reload](https://github.com/DanielAbrante/athena-env-website/tree/main/extensions/hot_reload.mjs) | Daniel Abrante      
   
-## Hot Reload (Linux only - x11)
+## Hot Reload (Linux)
+
+- Supports: **x11** and **XWayland**
+- Compatible with: **Flatpak** or **AppImage** formats
 
 ### Prerequisites
 
 Before you begin, make sure you have the following installed:
 
-1. [Node.js](https://nodejs.org/en/download/) _(version 18 or greater)_.
+1. [Node.js](https://nodejs.org/en/download/) _(version 22 or greater)_.
 2. [xdotool](https://github.com/jordansissel/xdotool)
 
 ### How to use
 
 1. Download the [extension](https://github.com/DanielAbrante/athena-env-website/tree/main/extensions/hot_reload.mjs)
-2. Open the **hot_reload.mjs** file and modify the ```pcsx2_config``` object and ```RESET_VIRTUAL_MACHINE_KEY``` variable
+
+2. Access your pcsx2 settings to modify the key combination for resetting the virtual machine.
+
+![](./assets/settings-hotkeys-modal.webp)
+![](./assets/reset-virtual-machine-option.webp)
+
+3. Open the **hot_reload.mjs** file and set the ```RESET_VIRTUAL_MACHINE_KEY``` variable to match your desired key combination.
+
+Example:
 
 ```js
-const pcsx2_config = {
-    path: "",
-    elf_name: "",
-    args: ['-fastboot', '-nogui', '-elf'],
-}
-
-// ...
-
-const RESET_VIRTUAL_MACHINE_KEY = "";
+const RESET_VIRTUAL_MACHINE_KEY = "ctrl+r";
 ```
 
-- **path:** Absolute path to the pcsx2 application (Flatpak or AppImage format). Example: */home/user/applications/pcsx2.AppImage*
-- **elf_name**: The base name of the *ELF* file, without the extension. Example: *MyGame*
-- **args**: Default arguments passed to pcsx2, feel free to modify them.
-- **RESET_VIRTUAL_MACHINE_KEY**: Bind a shortcut to this setting in the PCSX2 hotkeys section.
+If you are using the **AppImage** version of PCSX2, set the ```pcsx2AppimageCommand``` variable to the full path of your AppImage file.
 
-After making the changes, the configuration might look like this:
+Example:
 
 ```js
-const pcsx2_config = {
-    path: "/home/user/applications/pcsx2.AppImage",
-    elf_name: "MyGame",
-    args: ['-fastboot', '-nofullscreen', '-nogui', '-elf'],
-}
-
-// ...
-
-const RESET_VIRTUAL_MACHINE_KEY = 'alt+r';
+const pcsx2AppimageCommand = "/home/user/Applications/pcsx2.AppImage";
 ```
 
-4. Open the ```main.js``` file and insert the line of code below at the beginning
+4. Run the project
 
-```js
-console.log("AthenaEnv Started");
-```
-
-3. Run the project
 ```sh
 node hot_reload.mjs
 ```

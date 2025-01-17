@@ -1,86 +1,129 @@
-import { watch, readdirSync } from 'node:fs';
-import { fileURLToPath } from 'node:url';
-import { join, dirname} from 'node:path';
-import { spawn } from 'node:child_process';
+import { execSync, spawn } from "node:child_process";
+import { readdirSync, watch } from "node:fs";
+import { basename, dirname, extname, join } from "node:path";
+import { exit } from "node:process";
+import { fileURLToPath } from "node:url";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-const pcsx2_config = {
-    path: "",
-    elf_name: "",
-    args: ['-fastboot', '-nogui', '-elf'],
-}
+const pcsx2AppimageCommand = "";
+const pcsx2AppimageArgs = ["-fastboot", "-nogui", "-elf"];
 
-const elf_path = join(__dirname, `${pcsx2_config.elf_name}.elf`)
-const pcsx2 = spawn(pcsx2_config.path, [...pcsx2_config.args, elf_path]);
-
-const command = 'xdotool';
-const find_game_window = [
-    'search', '--name', `${pcsx2_config.elf_name} \\[\\?\\]`,
+const pcsx2FlatpakCommand = "flatpak";
+const pcsx2FlatpakArgs = [
+  "run",
+  "net.pcsx2.PCSX2",
+  "-fastboot",
+  "-nogui",
+  "-elf",
 ];
 
-const TOGGLE_TURBO_KEY = 'Tab';
-const RESET_VIRTUAL_MACHINE_KEY = 'alt+r';
+const ELF_NAME = readdirSync(__dirname).filter(
+  (file) => extname(file) === ".elf"
+)[0];
+const ELF_BASENAME = basename(ELF_NAME, ".elf");
+const ELF_ABSOLUTE_PATH = join(__dirname, ELF_NAME);
 
-const fastForward = () => spawn(command, [...find_game_window, 'key', TOGGLE_TURBO_KEY]);
-const reload = () => spawn(command, [...find_game_window, 'key', RESET_VIRTUAL_MACHINE_KEY, TOGGLE_TURBO_KEY]);
+let pcsx2;
 
-const ignored_folders = ['node_modules', 'assets', '@types', '.git'];
-const debounceTimers = {};
-
-const monitorDirectory = (directory) => {
-    try {
-        const entries = readdirSync(directory, { withFileTypes: true });
-
-        for (const entry of entries) {
-            const entryPath = join(directory, entry.name);
-
-            if (entry.isDirectory() && !ignored_folders.includes(entry.name)) {
-                monitorDirectory(entryPath);
-            } else if (entry.isFile() && entry.name.endsWith('.js')) {
-                watch(entryPath, () => {
-                    clearTimeout(debounceTimers[entryPath]);
-                    console.clear();
-                    console.log('Restarting...');
-                    debounceTimers[entryPath] = setTimeout(reload, 200);
-                });
-
-            }
-        };
-    } catch (err) {
-        console.error(`Error: ${directory} - ${err}`);
+if (pcsx2AppimageCommand) {
+  try {
+    execSync(`which ${pcsx2AppimageCommand}`);
+  } catch (error) {
+    if (error) {
+      console.error("AppImage isn't available.");
+      exit(1);
     }
+  }
+  pcsx2 = spawn(pcsx2AppimageCommand, [
+    ...pcsx2AppimageArgs,
+    ELF_ABSOLUTE_PATH,
+  ]);
+} else {
+  try {
+    execSync(
+      `which flatpak && flatpak override --user --filesystem=${__dirname} net.pcsx2.PCSX2`
+    );
+  } catch (error) {
+    if (error) {
+      console.error("Flatpak isn't available.");
+      exit(1);
+    }
+  }
+
+  pcsx2 = spawn(pcsx2FlatpakCommand, [...pcsx2FlatpakArgs, ELF_ABSOLUTE_PATH]);
+}
+
+const x11Command = "xdotool";
+const findWindowArgs = ["search", "--name", `${ELF_BASENAME} \\[\\?\\]`];
+
+const TOGGLE_TURBO_KEY = "F4";
+const RESET_VIRTUAL_MACHINE_KEY = "ctrl+r";
+
+spawn(x11Command, [
+  "search",
+  "--name",
+  "--sync",
+  `${ELF_BASENAME} \\[\\?\\]`,
+  "key",
+  TOGGLE_TURBO_KEY,
+]);
+
+const debounce = (fn, delay) => {
+  let timer = null;
+
+  return (...args) => {
+    clearTimeout(timer);
+    timer = setTimeout(() => fn(...args), delay);
+  };
 };
 
-monitorDirectory(__dirname);
+const handleFileChange = debounce(() => {
+  console.clear();
+  console.log("Restarting...");
+  isBooted = false;
 
-const boot_message = 'Graphics Driver Info'
+  spawn(x11Command, [
+    "search",
+    "--name",
+    `${ELF_BASENAME} \\[\\?\\]`,
+    "key",
+    RESET_VIRTUAL_MACHINE_KEY,
+    TOGGLE_TURBO_KEY,
+  ]);
+}, 100);
+
+watch(__dirname, { recursive: true }, (event, filename) => {
+  if (filename && event === "change") {
+    handleFileChange();
+  }
+});
+
+const STOP_MESSAGE = "audsrv_adpcm_init()";
+
 let isBooted = false;
 
 console.clear();
-console.log('Starting...');
+console.log("Starting...");
 
-pcsx2.stdout.setEncoding('utf8');
-pcsx2.stdout.on('data', (data) => {
-    if (!isBooted && data.includes(boot_message)) {
-        fastForward();
-    }
+pcsx2.stdout.setEncoding("utf8");
+pcsx2.stdout.on("data", (data) => {
+  if (isBooted) {
+    console.log(data);
+  }
 
-    if (data.includes('AthenaEnv Started')) {
-        console.clear();
-        isBooted = true;
-        fastForward();
-    }
-
-    if (isBooted) {
-        console.log(data);
-    }
-});
-
-process.on('SIGINT', () => {
+  if (data.includes(STOP_MESSAGE)) {
     console.clear();
 
-    console.log('\nClosed.');
-    process.exit(0);
+    spawn(x11Command, [...findWindowArgs, "key", TOGGLE_TURBO_KEY]);
+
+    isBooted = true;
+  }
+});
+
+process.on("SIGINT", () => {
+  console.clear();
+  console.log("\nClosed.");
+  process.exit(0);
 });
