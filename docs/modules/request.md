@@ -8,10 +8,10 @@ const request = new Request();
 
 ## Properties 
 
-- **keepalive:** bool
-- **useragent:** string
-- **userpwd:** string
-- **headers:** string array
+- **keepalive:** ``boolean``
+- **useragent:** ``string``
+- **userpwd:** ``string``
+- **headers:** ``string[]``
 
 ## Methods
 
