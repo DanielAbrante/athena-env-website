@@ -7,7 +7,7 @@
 Returns a color object from the specified RGB(A) parameters.
 
 ```js
-Color.new(r, g, b, a?);
+const col = Color.new(r, g, b, a?);
 ```
 
 ### getR
@@ -15,7 +15,7 @@ Color.new(r, g, b, a?);
 Get red intensity of the color.
 
 ```js
-Color.getR(col);
+const r = Color.getR(col);
 ```
 
 ### getG
@@ -23,7 +23,7 @@ Color.getR(col);
 Get green intensity of the color.
 
 ```js
-Color.getG(col);
+const g = Color.getG(col);
 ```
 
 ### getB
@@ -31,7 +31,7 @@ Color.getG(col);
 Get blue intensity of the color.
 
 ```js
-Color.getB(col);
+const b = Color.getB(col);
 ```
 
 ### getA
@@ -39,7 +39,7 @@ Color.getB(col);
 Get alpha intensity of the color.
 
 ```js
-Color.getA(col);
+const a = Color.getA(col);
 ```
 
 ### setR
