@@ -4,57 +4,31 @@ The PlayStation 2 has an I/O processor to deal with drivers and modules. Take co
 
 ## Properties
 
-**IOP.keyboard**
+- **IOP.keyboard**: USB Keyboard  
 
-USB Keyboard  
+- **IOP.mouse**: USB Mouse  
 
-**IOP.mouse**
+- **IOP.freeram**: IOP RAM Info  
 
-USB Mouse  
+- **IOP.ds34bt**: Bluetooth DualShock 3/4 pads  
 
-**IOP.freeram**
+- **IOP.ds34usb**: USB DualShock 3/4 pads  
 
-IOP RAM Info  
+- **IOP.network**: Network drivers  
 
-**IOP.ds34bt**
+- **IOP.pads**: DualShock 1/2 pads  
 
-Bluetooth DualShock 3/4 pads  
+- **IOP.memcard**: Memory Card  
 
-**IOP.ds34usb**
+- **IOP.audio**: Audio driver  
 
-USB DualShock 3/4 pads  
+- **IOP.usb_mass**: USB Mass storage, supports FAT32 and exFAT  
 
-**IOP.network**
+- **IOP.cdfs**: Disc driver  
 
-Network drivers  
+- **IOP.hdd**: Internal HDD driver  
 
-**IOP.pads**
-
-DualShock 1/2 pads  
-
-**IOP.memcard**
-
-Memory Card  
-
-**IOP.audio**
-
-Audio driver  
-
-**IOP.usb_mass**
-
-USB Mass storage, supports FAT32 and exFAT  
-
-**IOP.cdfs**
-
-Disc driver  
-
-**IOP.hdd**
-
-Internal HDD driver  
-
-**IOP.boot_device**
-
-Storage device used to boot Athena 
+- **IOP.boot_device**: Storage device used to boot Athena 
 
 ## Methods
 
@@ -89,10 +63,10 @@ const stats = IOP.getMemoryStats();
 ```
 
 :::warning
-Requires IOP.loadDefaultModule(IOP.freeram) first! 
+Requires **IOP.loadDefaultModule(IOP.freeram)** first!
 :::
 
-**Properties**:
+#### Properties
 
 - stats.free
 - stats.used
