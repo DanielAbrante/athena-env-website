@@ -8,9 +8,9 @@ Above being able to draw and everything else, A human interface is important. Su
 
 | Type            | Buttons                                                     |
 |-----------------|-------------------------------------------------------------|
-| Navigation      | `Pads.UP`, `Pads.DOWN`, `Pads.LEFT`, `Pads.RIGHT`           |
+| Directional     | `Pads.UP`, `Pads.DOWN`, `Pads.LEFT`, `Pads.RIGHT`           |
 | Action          | `Pads.TRIANGLE`, `Pads.CIRCLE`, `Pads.CROSS`, `Pads.SQUARE` |
-| Function        | `Pads.SELECT`, `Pads.START`                                 |
+| System          | `Pads.SELECT`, `Pads.START`                                 |
 | Shoulder        | `Pads.L1`, `Pads.R1`, `Pads.L2`, `Pads.R2`                  |
 | Stick           | `Pads.L3`, `Pads.R3`                                        |
 
@@ -25,14 +25,14 @@ Returns a pad object
 const pad = Pads.get(port?);
 ```
 
-**Properties**
+#### Properties
 
-- **pad.btns:** Button state on the current check.  
-- **pad.old_btns:** Button state on the last check.  
-- **pad.lx:** Left analog horizontal position (left = -127, default = 0, right = 128).  
-- **pad.ly:** Left analog vertical position (up = -127, default = 0, down = 128).  
-- **pad.rx:** Right analog horizontal position (left = -127, default = 0, right = 128).     
-- **pad.ry:** Right analog vertical position (up = -127, default = 0, down = 128).  
+- **pad.btns**: Button state on the current check.  
+- **pad.old_btns**: Button state on the last check.  
+- **pad.lx**: Left analog horizontal position (left = -127, default = 0, right = 128).  
+- **pad.ly**: Left analog vertical position (up = -127, default = 0, down = 128).  
+- **pad.rx**: Right analog horizontal position (left = -127, default = 0, right = 128).     
+- **pad.ry**: Right analog vertical position (up = -127, default = 0, down = 128).  
 
 ### update 
 
@@ -68,10 +68,11 @@ setEventHandler();
 
 ### newEvent
   
+Creates an asynchronous pad event, returns the event id. 
+
 ```js 
 const event_id = Pads.newEvent(button, kind, function);
 ```
-Creates an asynchronous pad event, returns the event id. 
 
 :::warning
 Remember to set the pad object event handler first!

@@ -14,17 +14,12 @@ const model = new RenderObject(mesh, texture?);
 
 ## Properties
 
-**vertices**
-
-A Render.vertex array that can be modified and read.
-
-**size**
-
-Vertex quantity.
+- **vertices**: A Render.vertex array that can be modified and read.
+- **size**: Vertex quantity.
 
 ## Methods
 
-## draw
+### draw
 
 Draws the object on screen.
 
@@ -32,7 +27,7 @@ Draws the object on screen.
 draw(pos_x, pos_y, pos_z, rot_x, rot_y, rot_z);
 ```
 
-## drawBounds
+### drawBounds
 
 Draws object bounding box.
 
@@ -40,7 +35,7 @@ Draws object bounding box.
 drawBounds(pos_x, pos_y, pos_z, rot_x, rot_y, rot_z);
 ```
 
-## getTexture
+### getTexture
 
 Gets the nth texture object from the model.
 
@@ -48,7 +43,7 @@ Gets the nth texture object from the model.
 getTexture(id);
 ```
 
-## setTexture
+### setTexture
 
 Changes or sets the nth texture on models.
 
@@ -56,7 +51,7 @@ Changes or sets the nth texture on models.
 setTexture(id, texture, range?);
 ```
 
-## getPipeline
+### getPipeline
 
 Returns the current rendering pipeline loaded for the model.
 
@@ -64,7 +59,7 @@ Returns the current rendering pipeline loaded for the model.
 getPipeline();
 ```
 
-## setPipeline
+### setPipeline
 
 Sets the current pipeline for the model. 
 
@@ -72,11 +67,11 @@ Sets the current pipeline for the model.
 setPipeline(pipeline);
 ```
 
-### Available pipelines
+#### Available pipelines
 
-- **Render.PL_NO_LIGHTS_COLORS:** Colors and lights disabled.
-- **Render.PL_NO_LIGHTS_COLORS_TEX:** Colors, lights and textures disabled.
-- **Render.PL_NO_LIGHTS:** Lights disabled, colors still working.
-- **Render.PL_NO_LIGHTS_TEX:** Textures and lights disabled, colors still working.
-- **Render.PL_DEFAULT:** Default for textured models. Lights and colors enabled.
-- **Render.PL_DEFAULT_NO_TEX:** Default for non-textured models. Lights and colors enabled.
+- **Render.PL_NO_LIGHTS_COLORS**: Colors and lights disabled.
+- **Render.PL_NO_LIGHTS_COLORS_TEX**: Colors, lights and textures disabled.
+- **Render.PL_NO_LIGHTS**: Lights disabled, colors still working.
+- **Render.PL_NO_LIGHTS_TEX**: Textures and lights disabled, colors still working.
+- **Render.PL_DEFAULT**: Default for textured models. Lights and colors enabled.
+- **Render.PL_DEFAULT_NO_TEX**: Default for non-textured models. Lights and colors enabled.

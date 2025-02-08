@@ -40,7 +40,7 @@ Returns a vertex to build a 3D mesh. It should be used to create vertex arrays.
 Render.vertex(x, y, z, n1, n2, n3, s, t, r, g, b, a);
 ```
 
-- **x, y, z** - Vertex position on 3D world.  
-- **n1, n2, n3** - Vertex normal.  
-- **s, t** - Vertex texture coordinates.  
-- **r, g, b, a** - Vertex color. 
+- **x, y, z**: Vertex position on 3D world.  
+- **n1, n2, n3**: Vertex normal.  
+- **s, t**: Vertex texture coordinates.  
+- **r, g, b, a**: Vertex color. 

@@ -19,49 +19,17 @@ const imageVRAM = new Image("owl.png", VRAM);
 
 ## Properties
 
-**width, height**
-
-Image drawing size, default value is the original image size.
- 
-**startx, starty**
-
-Beginning of the area that will be drawn from the image, the default value is 0.0.
- 
-**endx, endy**
-
-End of the area that will be drawn from the image, the default value is the original image size.
- 
-**angle**
-
-Define image rotation angle, default value is 0.0.
- 
-**color**
-
-Define image tinting, default value is Color.new(255, 255, 255, 128).
- 
-**filter**
-
-Choose between **LINEAR** or **NEAREST**, default value is NEAREST.
- 
-**size**
-
-Returns image real size occupied in memory.
- 
-**bpp**
-
-Returns image bits per-pixel qantity.
- 
-**delayed**
-
-If true, your texture was loaded in RAM, else, VRAM.
- 
-**pixels**
-
-The image pixel ArrayBuffer.
- 
-**palette**
-
-If is a palette image, it has a palette ArrayBuffer right here.
+- **width, height**: Image drawing size, default value is the original image size. 
+- **startx, starty**: Beginning of the area that will be drawn from the image, the default value is 0.0. 
+- **endx, endy**: End of the area that will be drawn from the image, the default value is the original image size. 
+- **angle**: Define image rotation angle, default value is 0.0. 
+- **color**: Define image tinting, default value is Color.new(255, 255, 255, 128).
+- **filter**: Choose between **LINEAR** or **NEAREST**, default value is NEAREST. 
+- **size**: Returns image real size occupied in memory. 
+- **bpp**: Returns image bits per-pixel qantity. 
+- **delayed**: If true, your texture was loaded in RAM, else, VRAM. 
+- **pixels**: The image pixel ArrayBuffer. 
+- **palette**: If is a palette image, it has a palette ArrayBuffer right here.
  
 ## Methods
 

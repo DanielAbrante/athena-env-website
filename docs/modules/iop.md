@@ -5,29 +5,17 @@ The PlayStation 2 has an I/O processor to deal with drivers and modules. Take co
 ## Properties
 
 - **IOP.keyboard**: USB Keyboard  
-
 - **IOP.mouse**: USB Mouse  
-
 - **IOP.freeram**: IOP RAM Info  
-
 - **IOP.ds34bt**: Bluetooth DualShock 3/4 pads  
-
 - **IOP.ds34usb**: USB DualShock 3/4 pads  
-
 - **IOP.network**: Network drivers  
-
 - **IOP.pads**: DualShock 1/2 pads  
-
 - **IOP.memcard**: Memory Card  
-
 - **IOP.audio**: Audio driver  
-
 - **IOP.usb_mass**: USB Mass storage, supports FAT32 and exFAT  
-
 - **IOP.cdfs**: Disc driver  
-
 - **IOP.hdd**: Internal HDD driver  
-
 - **IOP.boot_device**: Storage device used to boot Athena 
 
 ## Methods

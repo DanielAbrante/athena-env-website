@@ -1,6 +1,6 @@
 # OS
 
-The OS module provides Operating System specific Methods
+The os module provides Operating System specific functions:
 
 - low level file access
 - signals
@@ -13,9 +13,7 @@ The OS Methods usually return 0 if OK or an OS specific negative error code.
 
 ## Properties
 
-**os.platform**
-
-Return a string representing the platform: "linux", "darwin", "win32", "ps2" or "js".
+- **os.platform**: Return a string representing the platform: "linux", "darwin", "win32", "ps2" or "js".
 
 ## Methods
 
@@ -123,7 +121,11 @@ os.mkdir(path, mode = 0o777);
 
 ### stat
 
-Return [obj, err] where obj is an object containing the file status of path. err is the error code. The following fields are defined in obj: dev, ino, mode, nlink, uid, gid, rdev, size, blocks, atime, mtime, ctime. The times are specified in milliseconds since 1970. 
+Return [obj, err] where obj is an object containing the file status of path. err is the error code. 
+
+The following fields are defined in obj: dev, ino, mode, nlink, uid, gid, rdev, size, blocks, atime, mtime, ctime. 
+
+The times are specified in milliseconds since 1970. 
 
 ```js
 os.stat(path);

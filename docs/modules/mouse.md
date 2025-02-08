@@ -14,13 +14,10 @@ Mouse.init();
 
 ### get
 
-Returns mouse actual properties on the object format below:
-
 ```js
 const mouse = Mouse.get();
 ```
-
-**Properties**:
+Returns mouse actual properties on the object format below:
 
 - mouse.x
 - mouse.y
@@ -56,7 +53,7 @@ Mouse.setMode(mode);
 Get mouse acceleration.
 
 ```js
-const acceleration = Mouse.getAccel();
+const accel = Mouse.getAccel();
 ```
 
 ### setAccel

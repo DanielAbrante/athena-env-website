@@ -17,11 +17,16 @@ Network.init(); // DHCP Mode, dynamic.
 
 ### getConfig
 
-Returns conf.ip, conf.netmask, conf.gateway, conf.dns.
-
 ```js
-const config = Network.getConfig();
+const conf = Network.getConfig();
 ```
+
+Returns 
+
+- conf.ip
+- conf.netmask
+- conf.gateway
+- conf.dns
 
 ### deinit
 

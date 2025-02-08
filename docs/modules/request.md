@@ -3,15 +3,15 @@
 ## Construction  
 
 ```js
-const request = new Request();
+const r = new Request();
 ```
 
 ## Properties 
 
-- **keepalive:** ``boolean``
-- **useragent:** ``string``
-- **userpwd:** ``string``
-- **headers:** ``string[]``
+- **keepalive** (boolean)
+- **useragent** (string)
+- **userpwd** (string)
+- **headers** (string[])
 
 ## Methods
 
