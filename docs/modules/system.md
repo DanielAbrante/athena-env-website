@@ -10,9 +10,9 @@ Files, folders and system stuff.
 const listdir = System.listDir(path?);
 ```
 
-- **listdir[index].name:** return file name on indicated index(string)  
-- **listdir[index].size:** return file size on indicated index(integer)  
-- **listdir[index].directory:** return if indicated index is a file or a directory(bool)  
+- **listdir[index].name**: return file name on indicated index(string)  
+- **listdir[index].size**: return file size on indicated index(integer)  
+- **listdir[index].directory**: return if indicated index is a file or a directory(bool)  
 
 ### removeDirectory
 

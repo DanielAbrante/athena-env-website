@@ -1,8 +1,8 @@
 # Lights
 
-You have 4 lights to use in 3D scenes, use set to configure them.
+You have 4 lights to use in 3D scenes, use **set** to configure them.
 
-### Atributes
+## Atributes
 
 - Lights.DIRECTION
 - Lights.AMBIENT
