@@ -4,6 +4,8 @@ id: modules-index
 
 # Modules
 
+list of usable functions of AthenaEnv project currently, this list is constantly being updated.
+
 ## Info
 
 Parameters followed by "?" (question mark) are optional, e.g.:
