@@ -5,6 +5,7 @@ import clsx from "clsx";
 import { motion } from "motion/react";
 import { useEffect, useState } from "react";
 
+import Translate from "@docusaurus/Translate";
 import { games } from "./data";
 import styles from "./header.module.css";
 
@@ -66,13 +67,15 @@ export function Header() {
 				<Heading as="h1" className="hero__title">
 					{siteConfig.title}
 				</Heading>
-				<p className="hero__subtitle">{siteConfig.tagline}</p>
+				<p className="hero__subtitle">
+					<Translate>{siteConfig.tagline}</Translate>
+				</p>
 				<div>
 					<Link
 						className="button button--secondary button--lg"
 						to="/docs/intro"
 					>
-						Getting Started
+						<Translate>Getting Started</Translate>
 					</Link>
 				</div>
 			</div>

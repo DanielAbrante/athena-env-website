@@ -1,0 +1,30 @@
+{
+	"theme.SearchBar.label": {
+		"message": "Buscar",
+		"description": "The ARIA label and placeholder for search button"
+	},
+	"Getting Started": {
+		"message": "Introdução"
+	},
+	"Enhanced JavaScript environment for PlayStation 2™": {
+		"message": "Ambiente JavaScript aprimorado para PlayStation 2™"
+	},
+	"Easy to Use": {
+		"message": "Fácil de Usar"
+	},
+	"Simplified JavaScript integration for seamless development.": {
+		"message": "Integração simplificada de JavaScript para um desenvolvimento fluido."
+	},
+	"Fast": {
+		"message": "Rápido"
+	},
+	"Lightning speed powered by the QuickJS engine": {
+		"message": "Desempenho veloz utilizando o motor QuickJS"
+	},
+	"Free and Open Source": {
+		"message": "Livre e de Código Aberto"
+	},
+	"100% free and open-source, licensed under GPL-3.0": {
+		"message": "100% gratuito e de código aberto, licenciado sob GPL-3.0"
+	}
+}

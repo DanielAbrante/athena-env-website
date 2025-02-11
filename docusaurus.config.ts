@@ -15,7 +15,7 @@ const config: Config = {
 
 	i18n: {
 		defaultLocale: "en",
-		locales: ["en"],
+		locales: ["en", "pt-BR"],
 	},
 
 	headTags: [
@@ -83,6 +83,10 @@ const config: Config = {
 					label: "Documentation",
 				},
 				{
+					type: 'localeDropdown',
+					position: 'right',
+				},
+				{
 					href: "https://github.com/DanielAbrante/athena-env-website",
 					"arial-label": "Github repository link to athena-env website",
 					position: "right",
@@ -98,7 +102,7 @@ const config: Config = {
 		},
 		footer: {
 			style: "dark",
-			copyright: `AthenaEnv website was created by <a href="https://github.com/DanielAbrante" target='_blank'>Daniel Abrante</a> | © ${new Date().getFullYear()}`,
+			copyright: `AthenaEnv website was created by <a href="https://github.com/DanielAbrante" target='_blank'>Daniel Abrante</a> | © 2025`,
 			links: [
 				{
 					title: "Docs",
