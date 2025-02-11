@@ -1,6 +1,6 @@
 # AthenaEnv Website 
 
-This website serves as a centralized hub for all content related to [AthenaEnv](https://github.com/DanielSant0s/AthenaEnv), a project created by Daniel Santos.
+Hub for contents related to [AthenaEnv](https://github.com/DanielSant0s/AthenaEnv), a project created by Daniel Santos.
 
 It was built using [Docusaurus](https://docusaurus.io/), a tool designed specifically for creating documentation websites, ensuring an intuitive and efficient navigation experience.
 

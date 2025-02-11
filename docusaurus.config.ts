@@ -112,12 +112,8 @@ const config: Config = {
 							to: "/docs/modules",
 						},
 						{
-							label: "Performance",
-							to: "/docs/performance",
-						},
-						{
-							label: "Contributing",
-							to: "/docs/contributing",
+							label: "Contribute",
+							to: "/docs/contribute",
 						},
 					],
 				},
