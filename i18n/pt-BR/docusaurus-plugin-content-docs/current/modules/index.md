@@ -2,20 +2,12 @@
 id: modules-index
 ---
 
-# Modules
+# Módulos
 
-list of usable functions of AthenaEnv project currently, this list is constantly being updated.
+Lista de funções utilizáveis do projeto AthenaEnv, sendo essa lista constantemente atualizada.
 
-## Info
-
-Parameters followed by "?" (question mark) are optional, e.g.:
+Parâmetros seguidos de "?" (ponto de interrogação) são opcionais, por exemplo:
 
 ```js
 Color.new(r, g, b, a?); 
-```
-
-Parameters followed by "=" (equal sign) are default values, e.g.:
-
-```js
-readAsString(max_size = undefined);
 ```

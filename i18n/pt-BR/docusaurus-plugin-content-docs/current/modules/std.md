@@ -23,7 +23,7 @@ object containing the integer value of common errors (additional error codes may
 - std.EPERM
 - std.EPIPE
 
-## Methods
+## Métodos
 
 ### evalScript
 
@@ -33,7 +33,7 @@ Evaluate the string str as a script (global eval).
 std.evalScript(str, options = undefined);
 ```
 
-options is an optional object containing the following optional properties:
+options is an optional object containing the following optional Propriedades:
 
 - std.backtrace_barrier - Boolean (default = false). If true, error backtraces do not list the stack frames below the evalScript.
 
@@ -134,7 +134,7 @@ std.parseExtJSON(str);
 The following extensions are accepted:
 
 - Single line and multiline comments
-- unquoted properties (ASCII-only Javascript identifiers)
+- unquoted Propriedades (ASCII-only Javascript identifiers)
 - trailing comma in array and object definitions
 - single quoted strings
 - \f and \v are accepted as space characters

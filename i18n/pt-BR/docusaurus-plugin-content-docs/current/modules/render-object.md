@@ -1,6 +1,6 @@
 # RenderObject
 
-## Construction
+## Construção
 
 ```js
 const model = new RenderObject(mesh, texture?);
@@ -12,12 +12,12 @@ const model = new RenderObject(mesh, texture?);
 - If you don't have a MTL file but you want to bind a texture on it, just pass the image as a second argument if you want to use it. 
 :::
 
-## Properties
+## Propriedades
 
 - **vertices**: A Render.vertex array that can be modified and read.
 - **size**: Vertex quantity.
 
-## Methods
+## Métodos
 
 ### draw
 

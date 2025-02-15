@@ -1,12 +1,12 @@
 # Mouse
 
-Basic USB mouse support.
+Suporte básico para mouse USB.
 
-## Methods
+## Métodos
 
 ### init
 
-Initialize mouse routines.
+Inicializa as rotinas do mouse.
 
 ```js
 Mouse.init();
@@ -17,7 +17,8 @@ Mouse.init();
 ```js
 const mouse = Mouse.get();
 ```
-Returns mouse actual properties on the object format below:
+
+Retorna as propriedades atuais do mouse no formato de objeto abaixo:
 
 - mouse.x
 - mouse.y
@@ -26,7 +27,7 @@ Returns mouse actual properties on the object format below:
 
 ### setBoundary
 
-Set mouse x and y bounds.
+Define os limites x e y do mouse.
 
 ```js
 Mouse.setBoundary(minX, maxX, minY, maxY);
@@ -34,7 +35,7 @@ Mouse.setBoundary(minX, maxX, minY, maxY);
 
 ### getMode
 
-Get mouse mode (absolute or relative).
+Obtém o modo do mouse (absoluto ou relativo).
 
 ```js
 const mode = Mouse.getMode();
@@ -42,7 +43,7 @@ const mode = Mouse.getMode();
 
 ### setMode
 
-Set mouse mode.
+Define o modo do mouse.
 
 ```js
 Mouse.setMode(mode);
@@ -50,7 +51,7 @@ Mouse.setMode(mode);
 
 ### getAccel
 
-Get mouse acceleration.
+Obtém a aceleração do mouse.
 
 ```js
 const accel = Mouse.getAccel();
@@ -58,7 +59,7 @@ const accel = Mouse.getAccel();
 
 ### setAccel
 
-Set mouse acceleration.
+Define a aceleração do mouse.
 
 ```js
 Mouse.setAccel(val);
@@ -66,7 +67,7 @@ Mouse.setAccel(val);
 
 ### setPosition
 
-Set mouse pointer position.
+Define a posição do ponteiro do mouse.
 
 ```js
 Mouse.setPosition(x, y);

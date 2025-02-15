@@ -1,6 +1,6 @@
 # Lights
 
-You have 4 lights to use in 3D scenes, use **set** to configure them.
+Você tem 4 luzes para usar em cenas 3D, utilize **set** para configurá-las.
 
 ## Atributes
 
@@ -8,7 +8,7 @@ You have 4 lights to use in 3D scenes, use **set** to configure them.
 - Lights.AMBIENT
 - Lights.DIFFUSE
 
-## Methods
+## Métodos
 
 ### set
 

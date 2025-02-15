@@ -1,8 +1,8 @@
 # Socket
 
-Well, sockets.
+Bom, sockets.
 
-## Construction  
+## Construção  
 
 ```js
 const s = new Socket(domain, type);
@@ -12,7 +12,7 @@ const s = new Socket(domain, type);
 const s = new Socket(AF_INET, SOCK_STREAM);
 ```
 
-## Methods
+## Métodos
 
 ### connect
 
@@ -34,7 +34,7 @@ listen();
 
 ### send
 
-Send data with Buffer
+Enviar dados com Buffer
 
 ```js
 send(data);
@@ -42,7 +42,7 @@ send(data);
 
 ### recv
 
-Receive data to a buffer
+Receber dados para um buffer
 
 ```js
 recv(size);

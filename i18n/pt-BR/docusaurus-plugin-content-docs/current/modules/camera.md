@@ -1,6 +1,6 @@
 # Camera
 
-## Methods
+## Métodos
 
 ### position
 

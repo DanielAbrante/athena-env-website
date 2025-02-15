@@ -1,8 +1,8 @@
 # Network
 
-Net basics and web requests :D.
+Básicos de internet e requisições web :D.
 
-## Methods
+## Métodos
 
 ### init
 
@@ -11,8 +11,8 @@ Network.init(ip?, netmask?, gateway?, dns?);
 ```
 
 ```js
-Network.init("192.168.0.10", "255.255.255.0", "192.168.0.1", "192.168.0.1"); // Static mode
-Network.init(); // DHCP Mode, dynamic.
+Network.init("192.168.0.10", "255.255.255.0", "192.168.0.1", "192.168.0.1"); // Modo estático
+Network.init(); // Modo DHCP, dinâmico.
 ```
 
 ### getConfig
@@ -21,7 +21,7 @@ Network.init(); // DHCP Mode, dynamic.
 const conf = Network.getConfig();
 ```
 
-Returns 
+Retorna 
 
 - conf.ip
 - conf.netmask
@@ -30,7 +30,7 @@ Returns
 
 ### deinit
 
-Shutdown network.
+Desligar rede.
 
 ```js
 Network.deinit();

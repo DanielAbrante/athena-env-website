@@ -2,7 +2,7 @@
 
 Files, folders and system stuff.
 
-## Methods
+## Métodos
 
 ### listDir
 
@@ -105,7 +105,7 @@ const ram_usage = System.getMemoryStats();
 - **ram_usage.allocs**: Dynamic allocated memory tracking
 - **ram_usage.used**: All above, but combined
   
-## Asynchronous Methods
+## Asynchronous Métodos
 
 ### threadCopyFile
 

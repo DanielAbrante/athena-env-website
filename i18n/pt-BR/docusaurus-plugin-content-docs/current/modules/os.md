@@ -1,21 +1,21 @@
 # OS
 
-The os module provides Operating System specific functions:
+O módulo os fornece funções específicas do Sistema Operacional:
 
-- low level file access
-- signals
-- timers
-- asynchronous I/O
+- acesso a arquivos de baixo nível
+- sinais
+- temporizadores
+- I/O assíncrono
 
 :::note
-The OS Methods usually return 0 if OK or an OS specific negative error code.
+Os métodos do OS geralmente retornam 0 se estiver tudo OK ou um código de erro negativo específico do OS.
 :::
 
-## Properties
+## Propriedades
 
-- **os.platform**: Return a string representing the platform: "linux", "darwin", "win32", "ps2" or "js".
+- **os.platform**:  Retorna uma string representando a plataforma: "linux", "darwin", "win32", "ps2" ou "js".
 
-## Methods
+## Métodos
 
 ### open
 

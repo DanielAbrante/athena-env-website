@@ -2,7 +2,7 @@
 
 The entire screen of your project (2D and 3D), being able to change the resolution, enable or disable parameters.
 
-## Methods
+## Métodos
 
 ### display
 
@@ -84,7 +84,7 @@ Get actual video mode parameters. Returns an object.
 const canvas = Screen.getMode();
 ```
 
-#### Properties
+#### Propriedades
 
 - **canvas.width**: Screen width. Default: 640.
 - **canvas.height**: Screen height. Default: 448 on NTSC consoles, 512 on PAL consoles.

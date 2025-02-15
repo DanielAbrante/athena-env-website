@@ -1,8 +1,8 @@
 # Archive
 
-A simple compressed file extractor and manager.
+Um extrator e gerenciador de arquivos comprimidos simples.
 
-## Methods
+## Métodos
 
 ### open
 

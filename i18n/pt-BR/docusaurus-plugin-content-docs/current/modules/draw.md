@@ -1,12 +1,12 @@
 # Draw
 
-Shape drawing, triangles, circles etc.
+Desenho de formas, triângulos, círculos, etc.
 
-## Methods
+## Métodos
 
 ### point 
 
-Draws a pixel on the specified color and position on the screen.
+Desenha um pixel na cor e posição especificadas na tela.
 
 ```js
 Draw.point(x, y, color);
@@ -14,7 +14,7 @@ Draw.point(x, y, color);
 
 ### rect 
 
-Draws a rectangle on the specified color, position and size on the screen.
+Desenha um retângulo na cor, posição e tamanho especificados na tela.
 
 ```js
 Draw.rect(x, y, width, height, color);
@@ -22,7 +22,7 @@ Draw.rect(x, y, width, height, color);
 
 ### line 
 
-Draws a line on the specified colors and position on the screen.
+Desenha uma linha nas cores e posição especificadas na tela.
 
 ```js
 Draw.line(x, y, x2, y2, color);
@@ -30,7 +30,7 @@ Draw.line(x, y, x2, y2, color);
 
 ### circle 
 
-Draws a circle on the specified color, position, radius and fill on the screen.
+Desenha um círculo na cor, posição, raio e preenchimento especificados na tela.
 
 ```js
 Draw.circle(x, y, radius, color, filled?);
@@ -38,7 +38,7 @@ Draw.circle(x, y, radius, color, filled?);
 
 ### triangle 
 
-Draws a triangle on the specified points positions and colors on the screen.
+Desenha um triângulo nas posições dos pontos e cores especificados na tela.
 
 ```js
 Draw.triangle(x, y, x2, y2, x3, y3, color, color2?, color3?);
@@ -46,7 +46,7 @@ Draw.triangle(x, y, x2, y2, x3, y3, color, color2?, color3?);
 
 ### quad
 
-Draws a quad on the specified points positions and colors on the screen.
+Desenha um quadrilátero nas posições dos pontos e cores especificados na tela.
 
 ```js
 Draw.quad(x, y, x2, y2, x3, y3, x4, y4, color, color2?, color3?, color4?);

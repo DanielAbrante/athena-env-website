@@ -1,20 +1,20 @@
 # WebSocket
 
-## Construction 
+## Construção 
 
 ```js
 new WebSocket(url);
 ```
 
 ```js
-const socket = new WebSocket("wss://example.com");
+const socket = new WebSocket("wss://Exemplo.com");
 ```
 
-## Methods
+## Métodos
 
 ### send
 
-Send data with Buffer
+Enviar dados com Buffer
 
 ```js
 send(data);
@@ -22,7 +22,7 @@ send(data);
 
 ### recv
 
-Receive data to a buffer
+Receber dados para um buffer
 
 ```js
 recv();

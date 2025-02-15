@@ -2,10 +2,9 @@
 sidebar_position: 3
 ---
 
-# Error Report System
+# Sistema de Reporte de Erros
 
-Athena has a consistent error system, which is capable of pointing the error type, custom message, files, lines and it even has
-a color code.
+O Athena possui um sistema de erros consistente, capaz de indicar o tipo de erro, exibir uma mensagem personalizada, mostrar os arquivos e linhas afetados e até mesmo utilizar um código de cores.
 
 ## EvalError  
 ![_50bda816_20230409024828](https://user-images.githubusercontent.com/47725160/230756846-e7e5ef7d-4ca6-4e10-822b-bd8ab94e302f.png)

@@ -2,13 +2,13 @@
 sidebar_position: 5
 ---
 
-# Community Resources
+# Comunidade
 
-## List
+## Lista
 
-A collection of resources built by the community.
+Uma coleção de recursos construídos pela comunidade.
 
-| Title | Author 
+| Título | Autor 
 | --- | --- |
 [athenaenv-pkgs](https://github.com/terremoth/athenaenv-pkgs) | terremoth
 [athenaenv-starter-js](https://github.com/Wellinator/athenaenv-starter-js) | Wellinator

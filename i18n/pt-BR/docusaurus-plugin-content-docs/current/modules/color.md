@@ -1,10 +1,10 @@
 # Color
 
-## Methods
+## Métodos
 
 ### new
 
-Returns a color object from the specified RGB(A) parameters.
+Retorna um objeto de cor a partir dos parâmetros RGB(A) especificados.
 
 ```js
 const col = Color.new(r, g, b, a?);
@@ -12,7 +12,7 @@ const col = Color.new(r, g, b, a?);
 
 ### getR
 
-Get red intensity of the color.
+Obtém a intensidade vermelha da cor.
 
 ```js
 const r = Color.getR(col);
@@ -20,7 +20,7 @@ const r = Color.getR(col);
 
 ### getG
 
-Get green intensity of the color.
+Obtém a intensidade verde da cor.
 
 ```js
 const g = Color.getG(col);
@@ -28,7 +28,7 @@ const g = Color.getG(col);
 
 ### getB
 
-Get blue intensity of the color.
+Obtém a intensidade azul da cor.
 
 ```js
 const b = Color.getB(col);
@@ -36,7 +36,7 @@ const b = Color.getB(col);
 
 ### getA
 
-Get alpha intensity of the color.
+Obtém a intensidade alfa da cor.
 
 ```js
 const a = Color.getA(col);
@@ -44,7 +44,7 @@ const a = Color.getA(col);
 
 ### setR
 
-Set red intensity of the color.
+Define a intensidade vermelha da cor.
 
 ```js
 Color.setR(col, r);
@@ -52,7 +52,7 @@ Color.setR(col, r);
 
 ### setG
 
-Set green intensity of the color.
+Define a intensidade verde da cor.
 
 ```js
 Color.setG(col, g);
@@ -60,7 +60,7 @@ Color.setG(col, g);
 
 ### setB
 
-Set blue intensity of the color.
+Define a intensidade azul da cor.
 
 ```js
 Color.setB(col, b);
@@ -68,7 +68,7 @@ Color.setB(col, b);
 
 ### setA
 
-Set alpha intensity of the color.
+Define a intensidade alfa da cor.
 
 ```js
 Color.setA(col, a);

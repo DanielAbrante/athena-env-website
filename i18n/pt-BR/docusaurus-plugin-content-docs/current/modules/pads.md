@@ -15,7 +15,7 @@ Above being able to draw and everything else, A human interface is important. Su
 | Stick           | `Pads.L3`, `Pads.R3`                                        |
 
 
-## Methods
+## Métodos
 
 ### get
 
@@ -25,7 +25,7 @@ Returns a pad object
 const pad = Pads.get(port?);
 ```
 
-#### Properties
+#### Propriedades
 
 - **pad.btns**: Button state on the current check.  
 - **pad.old_btns**: Button state on the last check.  

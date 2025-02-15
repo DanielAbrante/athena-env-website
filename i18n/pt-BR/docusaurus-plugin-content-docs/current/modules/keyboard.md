@@ -1,12 +1,12 @@
 # Keyboard
 
-Basic USB keyboard support.
+Suporte básico para teclado USB.
 
-## Methods
+## Métodos
 
 ### init
 
-Initialize keyboard routines.
+Inicializa as rotinas do teclado.
 
 ```js
 Keyboard.init();
@@ -14,7 +14,7 @@ Keyboard.init();
 
 ### get
 
-Get keyboard current char.
+Obtém o caractere atual do teclado.
 
 ```js
 const c = Keyboard.get();
@@ -22,7 +22,7 @@ const c = Keyboard.get();
 
 ### setRepeatRate
 
-Set keyboard repeat rate.
+Define a taxa de repetição do teclado.
 
 ```js
 Keyboard.setRepeatRate(msec);
@@ -30,7 +30,7 @@ Keyboard.setRepeatRate(msec);
 
 ### setBlockingMode
 
-Sets keyboard to block (or not) the thread waiting for the next key to be pressed.
+Define se o teclado irá bloquear (ou não) a thread aguardando a próxima tecla ser pressionada.
 
 ```js
 Keyboard.setBlockingMode(mode);
@@ -38,7 +38,7 @@ Keyboard.setBlockingMode(mode);
 
 ### deinit
 
-Destroy keyboard routines.
+Destrói as rotinas do teclado.
 
 ```js
 Keyboard.deinit();

@@ -1,8 +1,8 @@
 # Render
 
-Basic 3D support powered by a VU1 renderer.
+Suporte básico para 3D com renderizador VU1.
 
-## Methods
+## Métodos
 
 ### setMode
 
@@ -15,32 +15,32 @@ Screen.setMode(canvas);
 ```
 
 :::info
-- Remember to enable zbuffering on screen mode
-- Default NTSC mode(3D enabled)
+- Lembre-se de ativar o zbuffering no modo de tela
+- Modo NTSC padrão (3D ativado)
 :::
 
 ### setView
 
-Initializes rendering routines.
+Inicializa as rotinas de renderização.
 
 ```js
 Render.setView(aspect, fov?);
 ```
 
 :::info
-- default aspect is 4/3, widescreen is 16/9.
-- default fov: 0.2
+- aspecto padrão é 4/3, o widescreen é 16/9.
+- fov padrão: 0.2
 :::
 
 ### vertex
 
-Returns a vertex to build a 3D mesh. It should be used to create vertex arrays.  
+Retorna um vértice para construir uma malha 3D. Deve ser usado para criar arrays de vértices.
 
 ```js
 Render.vertex(x, y, z, n1, n2, n3, s, t, r, g, b, a);
 ```
 
-- **x, y, z**: Vertex position on 3D world.  
-- **n1, n2, n3**: Vertex normal.  
-- **s, t**: Vertex texture coordinates.  
-- **r, g, b, a**: Vertex color. 
+- **x, y, z**: Posição do vértice no mundo 3D.
+- **n1, n2, n3**: Normal do vértice.  
+- **s, t**: Coordenadas de textura do vértice.
+- **r, g, b, a**: Cor do vértice. 

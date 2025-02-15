@@ -1,19 +1,19 @@
 # Request
 
-## Construction  
+## Construção  
 
 ```js
 const r = new Request();
 ```
 
-## Properties 
+## Propriedades 
 
 - **keepalive** (boolean)
 - **useragent** (string)
 - **userpwd** (string)
 - **headers** (string[])
 
-## Methods
+## Métodos
 
 ### get
 
@@ -39,7 +39,7 @@ post(url, data);
 download(url, fname);
 ```
 
-## Asynchronous methods
+## Asynchronous Métodos
 
 ### asyncGet
 

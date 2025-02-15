@@ -1,8 +1,8 @@
 # Timer
 
-Control the time precisely in your code, it contains several timing Methods.
+Controle o tempo com precisão no seu código, ele contém vários métodos de temporização.
 
-## Methods
+## Métodos
 
 ### new
 

@@ -1,8 +1,8 @@
 # Sound
 
-Sound Methods, supporting WAV, OGG and ADPCM.
+Sound Métodos, supporting WAV, OGG and ADPCM.
 
-## Methods
+## Métodos
 
 ### setVolume
 

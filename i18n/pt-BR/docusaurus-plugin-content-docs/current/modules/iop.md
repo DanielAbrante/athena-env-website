@@ -1,24 +1,24 @@
 # IOP
 
-The PlayStation 2 has an I/O processor to deal with drivers and modules. Take control of it!
+O PlayStation 2 possui um processador de E/S para gerenciar drivers e módulos. Assuma o controle dele!
 
-## Properties
+## Propriedades
 
-- **IOP.keyboard**: USB Keyboard  
-- **IOP.mouse**: USB Mouse  
-- **IOP.freeram**: IOP RAM Info  
-- **IOP.ds34bt**: Bluetooth DualShock 3/4 pads  
-- **IOP.ds34usb**: USB DualShock 3/4 pads  
-- **IOP.network**: Network drivers  
-- **IOP.pads**: DualShock 1/2 pads  
-- **IOP.memcard**: Memory Card  
-- **IOP.audio**: Audio driver  
-- **IOP.usb_mass**: USB Mass storage, supports FAT32 and exFAT  
-- **IOP.cdfs**: Disc driver  
-- **IOP.hdd**: Internal HDD driver  
-- **IOP.boot_device**: Storage device used to boot Athena 
+- **IOP.keyboard**: Teclado USB
+- **IOP.mouse**: Mouse USB
+- **IOP.freeram**: Informação da RAM do IOP  
+- **IOP.ds34bt**: Controle DualShock 3/4 via Bluetooth
+- **IOP.ds34usb**: Controle DualShock 3/4 via USB
+- **IOP.network**: Drivers de rede 
+- **IOP.pads**: Conroles DualShock 1/2  
+- **IOP.memcard**: Cartão de Memória
+- **IOP.audio**: Driver de áudio 
+- **IOP.usb_mass**: Armazenamento USB, compatível com FAT32 e exFAT 
+- **IOP.cdfs**: Driver de disco
+- **IOP.hdd**: Driver de HDD interno  
+- **IOP.boot_device**: Dispositivo de armazenamento usado para inicializar o Athena
 
-## Methods
+## Métodos
 
 ### loadModule
 
@@ -51,10 +51,10 @@ const stats = IOP.getMemoryStats();
 ```
 
 :::warning
-Requires **IOP.loadDefaultModule(IOP.freeram)** first!
+Requer **IOP.loadDefaultModule(IOP.freeram)** primeiro!
 :::
 
-#### Properties
+#### Propriedades
 
 - stats.free
 - stats.used
