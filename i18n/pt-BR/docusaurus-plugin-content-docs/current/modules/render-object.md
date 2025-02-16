@@ -7,21 +7,21 @@ const model = new RenderObject(mesh, texture?);
 ```
 
 :::info
-- Load simple WaveFront OBJ files or vertex arrays.
-- MTL is supported on OBJs (including per-vertex colors and multi-texturing).
-- If you don't have a MTL file but you want to bind a texture on it, just pass the image as a second argument if you want to use it. 
+- Carrega arquivos simples WaveFront OBJ ou arrays de vértices.
+- MTL é suportado nos arquivos OBJs (incluindo cores por vértice e multi-texturização).
+- Se você não tiver um arquivo MTL, mas quiser vincular uma textura a ele, basta passar a imagem como um segundo argumento, se quiser usá-la.
 :::
 
 ## Propriedades
 
-- **vertices**: A Render.vertex array that can be modified and read.
-- **size**: Vertex quantity.
+- **vertices**: Um array de vértices Render.vertex que pode ser modificado e lido.
+- **size**: Quantidade de vértices.
 
 ## Métodos
 
 ### draw
 
-Draws the object on screen.
+Desenha o objeto na tela.
 
 ```js
 draw(pos_x, pos_y, pos_z, rot_x, rot_y, rot_z);
@@ -29,7 +29,7 @@ draw(pos_x, pos_y, pos_z, rot_x, rot_y, rot_z);
 
 ### drawBounds
 
-Draws object bounding box.
+Desenha a caixa delimitadora do objeto.
 
 ```js
 drawBounds(pos_x, pos_y, pos_z, rot_x, rot_y, rot_z);
@@ -37,7 +37,7 @@ drawBounds(pos_x, pos_y, pos_z, rot_x, rot_y, rot_z);
 
 ### getTexture
 
-Gets the nth texture object from the model.
+Obtém o n-ésimo objeto de textura do modelo.
 
 ```js
 getTexture(id);
@@ -45,7 +45,7 @@ getTexture(id);
 
 ### setTexture
 
-Changes or sets the nth texture on models.
+Altera ou define a n-ésima textura nos modelos.
 
 ```js
 setTexture(id, texture, range?);
@@ -53,7 +53,7 @@ setTexture(id, texture, range?);
 
 ### getPipeline
 
-Returns the current rendering pipeline loaded for the model.
+Retorna o pipeline de renderização atual carregado para o modelo.
 
 ```js
 getPipeline();
@@ -61,7 +61,7 @@ getPipeline();
 
 ### setPipeline
 
-Sets the current pipeline for the model. 
+Define o pipeline atual para o modelo.
 
 ```js
 setPipeline(pipeline);
@@ -69,9 +69,9 @@ setPipeline(pipeline);
 
 #### Available pipelines
 
-- **Render.PL_NO_LIGHTS_COLORS**: Colors and lights disabled.
-- **Render.PL_NO_LIGHTS_COLORS_TEX**: Colors, lights and textures disabled.
-- **Render.PL_NO_LIGHTS**: Lights disabled, colors still working.
-- **Render.PL_NO_LIGHTS_TEX**: Textures and lights disabled, colors still working.
-- **Render.PL_DEFAULT**: Default for textured models. Lights and colors enabled.
-- **Render.PL_DEFAULT_NO_TEX**: Default for non-textured models. Lights and colors enabled.
+- **Render.PL_NO_LIGHTS_COLORS**: Cores e luzes desativados.
+- **Render.PL_NO_LIGHTS_COLORS_TEX**: Cores, luzes e texturas desativados.
+- **Render.PL_NO_LIGHTS**: Luzes desativadas, cores ainda funcionando.
+- **Render.PL_NO_LIGHTS_TEX**: Texturas e luzes desativadas, cores ainda funcionando.
+- **Render.PL_DEFAULT**: Padrão para modelos texturizados. Luzes e cores ativadas.
+- **Render.PL_DEFAULT_NO_TEX**: Padrão para modelos não texturizados. Luzes e cores ativadas.

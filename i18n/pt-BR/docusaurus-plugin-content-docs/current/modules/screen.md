@@ -1,12 +1,12 @@
 # Screen
 
-The entire screen of your project (2D and 3D), being able to change the resolution, enable or disable parameters.
+Toda a tela do seu projeto (2D e 3D), com a possibilidade de alterar a resolução, ativar ou desativar parâmetros.
 
 ## Métodos
 
 ### display
 
-Makes the specified function behave like a main loop, when you don't need to clear or flip the screen because it's done automatically.  
+Faz com que a função especificada se comporte como um loop principal, quando você não precisa limpar ou alternar a tela, pois isso é feito automaticamente.
 
 ```js
 Screen.display(func);
@@ -14,7 +14,7 @@ Screen.display(func);
 
 ### clearColor
 
-Sets a constant clear color for Screen.display function.
+Define uma cor de limpeza constante para a função Screen.display.
 
 ```js
 Screen.clearColor(color?);
@@ -22,7 +22,7 @@ Screen.clearColor(color?);
 
 ### clear
 
-Clears screen with the specified color. If you don't specify any argument, it will use black as default.  
+Limpa a tela com a cor especificada. Se nenhum argumento for especificado, será usada a cor preta como padrão.
 
 ```js
 Screen.clear(color?);
@@ -30,7 +30,7 @@ Screen.clear(color?);
 
 ### flip
 
-Run the render queue and jump to the next frame, i.e.: Updates your screen.  
+Executa a fila de renderização e pula para o próximo quadro, ou seja, atualiza sua tela.
 
 ```js
 Screen.flip();
@@ -38,7 +38,7 @@ Screen.flip();
 
 ### getFreeVRAM
 
-Returns the total of free Video Memory.  
+Retorna o total de memória de vídeo livre.
 
 ```js
 const freevram = Screen.getFreeVRAM();
@@ -46,7 +46,7 @@ const freevram = Screen.getFreeVRAM();
 
 ### setVSync
 
-Toggles VSync, which makes the framerate stable in 15, 30, 60(depending on the mode) on screen.  
+Alterna o VSync, que torna a taxa de quadros estável em 15, 30 ou 60 (dependendo do modo) na tela.
 
 ```js
 Screen.setVSync(bool);
@@ -54,7 +54,7 @@ Screen.setVSync(bool);
 
 ### setFrameCounter
 
-Toggles frame counting and FPS collecting.  
+Alterna a contagem de quadros e a coleta de FPS.
 
 ```js
 Screen.setFrameCounter(bool);
@@ -62,7 +62,7 @@ Screen.setFrameCounter(bool);
 
 ### waitVblankStart
 
-Waits for a vertical sync.  
+Espera por uma sincronização vertical.
 
 ```js
 Screen.waitVblankStart();
@@ -70,7 +70,7 @@ Screen.waitVblankStart();
 
 ### getFPS
 
-Get Frames per second measure within the specified frame_interval in msec. Dependant on Screen.setFrameCounter(true) to work.
+Obtém a medida de quadros por segundo dentro do intervalo de quadro especificado em milissegundos. Depende de Screen.setFrameCounter(true) para funcionar.
 
 ```js
 const fps = Screen.getFPS(frame_interval);
@@ -78,7 +78,7 @@ const fps = Screen.getFPS(frame_interval);
 
 ### getMode
 
-Get actual video mode parameters. Returns an object.
+Obtém os parâmetros do modo de vídeo atual. Retorna um objeto.
 
 ```js
 const canvas = Screen.getMode();
@@ -86,18 +86,18 @@ const canvas = Screen.getMode();
 
 #### Propriedades
 
-- **canvas.width**: Screen width. Default: 640.
-- **canvas.height**: Screen height. Default: 448 on NTSC consoles, 512 on PAL consoles.
-- **canvas.psm**: Color mode. Available colormodes: CT16, CT16S, CT24, CT32.
-- **canvas.interlace**: Available interlaces: INTERLACED, PROGRESSIVE.
-- **canvas.field**: Available fields: FIELD, FRAME.
-- **canvas.double_buffering**: Enable or disable double buffering(bool).
-- **canvas.zbuffering**: Enable or disable Z buffering (3D buffering)(bool).
-- **canvas.psmz**: ZBuffering color mode. Available zbuffer colormodes: Z16, Z16S, Z24, Z32.
+- **canvas.width**: Largura da tela. Padrão: 640.
+- **canvas.height**: Altura da tela. Padrão: 448 em consoles NTSC, 512 em consoles PAL.
+- **canvas.psm**: Modo de cor. Modos de cor disponíveis: CT16, CT16S, CT24, CT32.
+- **canvas.interlace**: Interlaces disponíveis: INTERLACED, PROGRESSIVE.
+- **canvas.field**: Campos disponíveis: FIELD, FRAME.
+- **canvas.double_buffering**: Ativar ou desativar o double buffering(bool).
+- **canvas.zbuffering**: Ativar ou desativar o Z buffering (3D buffering)(bool).
+- **canvas.psmz**: Modo de cor do ZBuffering. Modos de cor de ZBuffer disponíveis: Z16, Z16S, Z24, Z32.
 
 ### setMode
 
-Set the current video mode, get an video mode object as an argument.
+Define o modo de vídeo atual, recebendo um objeto de modo de vídeo como argumento.
 
 ```js
 Screen.setMode(canvas);

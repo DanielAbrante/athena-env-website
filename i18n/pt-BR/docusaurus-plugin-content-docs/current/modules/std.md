@@ -1,16 +1,16 @@
 # STD
 
-The std module provides wrappers to the libc stdlib.h and stdio.h and a few other utilities. 
+O módulo std fornece wrappers para as bibliotecas padrão do C (stdlib.h e stdio.h), além de algumas outras utilidades.
 
-Wrappers to the libc file stdin, stdout, stderr:
+Wrappers para os arquivos padrão do libc: stdin, stdout e stderr.
 
 - std.in
 - std.out
 - std.err
 
-## Enumeration
+## Enumeração
 
-object containing the integer value of common errors (additional error codes may be defined)
+Objeto que contém os valores inteiros dos erros comuns (códigos de erro adicionais podem ser definidos).
 
 - std.EINVAL
 - std.EIO
@@ -27,33 +27,33 @@ object containing the integer value of common errors (additional error codes may
 
 ### evalScript
 
-Evaluate the string str as a script (global eval). 
+Avalia a string str como um script (eval global).
 
 ```js
 std.evalScript(str, options = undefined);
 ```
 
-options is an optional object containing the following optional Propriedades:
+options é um objeto opcional contendo as seguintes propriedades opcionais:
 
-- std.backtrace_barrier - Boolean (default = false). If true, error backtraces do not list the stack frames below the evalScript.
+- std.backtrace_barrier - Boolean (padrão = false). Se verdadeiro, os rastreamentos de erro não listam os frames da pilha abaixo do evalScript.
 
 ### loadScript
 
-Evaluate the file filename as a script (global eval).
+Avalia o arquivo filename como um script (eval global).
 
 ```js
 std.loadScript(filename);
 ```
 ### exists
 
-Returns a bool that determines whether the file exists or not.
+Retorna um booleano indicando se o arquivo existe ou não.
 
 ```js
 const hasfile = std.exists(filename);
 ```
 ### loadFile
 
-Load the file filename and return it as a string assuming UTF-8 encoding. Return null in case of I/O error.
+Carrega o arquivo filename e retorna seu conteúdo como uma string, assumindo codificação UTF-8. Retorna null em caso de erro de I/O.
 
 ```js
 const fstr = std.loadFile(filename);
@@ -61,7 +61,7 @@ const fstr = std.loadFile(filename);
 
 ### open
 
-Open a file (wrapper to the libc fopen()). Return the FILE object or null in case of I/O error. If errorObj is not undefined, set its errno property to the error code or to 0 if no error occured.
+Abre um arquivo (wrapper para fopen() do libc). Retorna o objeto FILE ou null em caso de erro de I/O. Se errorObj for definido, sua propriedade errno será configurada com o código do erro ou 0 se não houver erro.
 
 ```js
 const file = std.open(filename, flags, errorObj = undefined);
@@ -69,7 +69,7 @@ const file = std.open(filename, flags, errorObj = undefined);
 
 ### fdopen
 
-Open a file from a file handle (wrapper to the libc fdopen()). Return the FILE object or null in case of I/O error. If errorObj is not undefined, set its errno property to the error code or to 0 if no error occured.
+Abra um arquivo a partir de um descritor de arquivo (envoltório para o libc fdopen()). Retorna o objeto FILE ou null em caso de erro de I/O. Se errorObj não estiver indefinido, defina a propriedade errno como o código de erro ou 0 se não ocorrer erro.
 
 ```js
 std.fdopen(fd, flags, errorObj = undefined);
@@ -77,7 +77,7 @@ std.fdopen(fd, flags, errorObj = undefined);
 
 ### tmpfile
 
-Open a temporary file. Return the FILE object or null in case of I/O error. If errorObj is not undefined, set its errno property to the error code or to 0 if no error occured.
+Abre um arquivo temporário. Retorna o objeto FILE ou null em caso de erro de I/O. Se errorObj não for undefined, define sua propriedade errno com o código de erro ou 0 se nenhum erro ocorrer.
 
 ```js
 std.tmpfile(errorObj = undefined);
@@ -85,7 +85,7 @@ std.tmpfile(errorObj = undefined);
 
 ### puts
 
-Equivalent to std.out.puts(str).
+Equivalente a std.out.puts(str).
 
 ```js
 std.puts(str);
@@ -93,7 +93,7 @@ std.puts(str);
 
 ### printf
 
-Equivalent to std.out.printf(fmt, ...args).
+Equivalente a std.out.printf(fmt, ...args).
 
 ```js
 std.printf(fmt, ...args);
@@ -101,7 +101,7 @@ std.printf(fmt, ...args);
 
 ### sprintf
 
-Equivalent to the libc sprintf().
+Equivalente à função sprintf() do libc.
 
 ```js
 std.sprintf(fmt, ...args);
@@ -109,7 +109,7 @@ std.sprintf(fmt, ...args);
 
 ### strerror
 
-Return a string that describes the error errno.
+Retorna uma string que descreve o erro errno.
 
 ```js
 std.strerror(errno);
@@ -117,7 +117,7 @@ std.strerror(errno);
 
 ### gc
 
-Manually invoke the cycle removal algorithm. The cycle removal algorithm is automatically started when needed, so this function is useful in case of specific memory constraints or for testing.
+Invoca manualmente o algoritmo de remoção de ciclos. Ele é iniciado automaticamente quando necessário, então esta função é útil para casos de restrições específicas de memória ou para testes.
 
 ```js
 std.gc();
@@ -125,21 +125,21 @@ std.gc();
 
 ### parseExtJSON
 
-Parse str using a superset of JSON.parse.
+Analisa str usando um superconjunto do JSON.parse.
 
 ```js
 std.parseExtJSON(str);
 ```
 
-The following extensions are accepted:
+As seguintes extensões são aceitas:
 
-- Single line and multiline comments
-- unquoted Propriedades (ASCII-only Javascript identifiers)
-- trailing comma in array and object definitions
-- single quoted strings
-- \f and \v are accepted as space characters
-- leading plus in numbers
-- octal (0o prefix) and hexadecimal (0x prefix) numbers
+- Comentários de linha única e múltiplas linhas
+- propriedades sem aspas (identificadores ASCII-only do JavaScript)
+- vírgula final em definições de array e objeto
+- strings com aspas simples
+- \f e \v são aceitos como caracteres de espaço
+- sinal de mais (+) antes de números
+- números octais (prefixo 0o) e hexadecimais (prefixo 0x)
 
 ## FILE
 
@@ -154,13 +154,13 @@ const file = std.open("test.txt", "w");
 ```
 
 :::info
-  - filename - Path to the file, E.g.: "samples/test.txt".
-  - flags - File mode, E.g.: "w", "r", "wb", "rb", etc.
+  - filename - Caminho para o arquivo, Ex.: "samples/test.txt".
+  - flags - Modo do arquivo, Ex.: "w", "r", "wb", "rb", etc.
 :::
 
 ### close
 
-Close the file. Return 0 if OK or -errno in case of I/O error.
+Fecha o arquivo. Retorna 0 se bem-sucedido ou -errno em caso de erro de I/O.
 
 ```js
 close();
@@ -168,7 +168,7 @@ close();
 
 ### puts
 
-Outputs the string with the UTF-8 encoding.
+Exibe a string com codificação UTF-8.
 
 ```js
 puts(str);
@@ -176,19 +176,19 @@ puts(str);
 
 ### printf
 
-Formatted printf.
+printf formatado.
 
 ```js
 printf(fmt, ...args);
 ```
 
 :::info
-The same formats as the standard C library printf are supported. Integer format types (e.g. %d) truncate the Numbers or BigInts to 32 bits. Use the l modifier (e.g. %ld) to truncate to 64 bits.
+Suporta os mesmos formatos da função printf da biblioteca padrão C. Tipos de formato inteiros (ex.: %d) truncam Numbers ou BigInts para 32 bits. Use o modificador l (ex.: %ld) para truncar para 64 bits.
 :::
 
 ### flush
 
-Flush the buffered file.
+Esvazia o buffer do arquivo.
 
 ```js
 flush();
@@ -196,13 +196,13 @@ flush();
 
 ### seek
 
-Seek to a give file position (whence is std.SEEK_*). offset can be a number or a bigint. Return 0 if OK or -errno in case of I/O error.
+Move-se para uma posição específica no arquivo (whence é std.SEEK_*). offset pode ser um número ou bigint. Retorna 0 se bem-sucedido ou -errno em caso de erro de I/O.
 
 ```js
 seek(offset, whence);
 ```
 
-Constants:
+Constantes:
 
 - std.SEEK_SET
 - std.SEEK_CUR
@@ -210,7 +210,7 @@ Constants:
 
 ### tell
 
-Return the current file position.
+Retorna a posição atual no arquivo.
 
 ```js
 tell();
@@ -218,7 +218,7 @@ tell();
 
 ### tello
 
-Return the current file position as a bigint.
+Retorna a posição atual no arquivo como um bigint.
 
 ```js
 tello();
@@ -226,7 +226,7 @@ tello();
 
 ### eof
 
-Return true if end of file.
+Retorna verdadeiro se for o fim do arquivo.
 
 ```js
 eof();
@@ -234,7 +234,7 @@ eof();
 
 ### fileno
 
-Return the associated OS handle.
+Retorna o identificador do sistema operacional associado.
 
 ```js
 fileno();
@@ -242,7 +242,7 @@ fileno();
 
 ### error
 
-Return true if there was an error.
+Retorna true se houver um erro.
 
 ```js
 error();
@@ -250,7 +250,7 @@ error();
 
 ### clearerr
 
-Clear the error indication.
+Limpa a indicação de erro.
 
 ```js
 clearerr();
@@ -258,7 +258,7 @@ clearerr();
 
 ### read
 
-Read length bytes from the file to the ArrayBuffer buffer at byte position position (wrapper to the libc fread).
+Lê o comprimento de bytes do arquivo para o buffer do ArrayBuffer na posição do byte (wrapper para libc fread).
 
 ```js
 read(buffer, position, length);
@@ -266,7 +266,7 @@ read(buffer, position, length);
 
 ### write
 
-Write length bytes to the file from the ArrayBuffer buffer at byte position position (wrapper to the libc fwrite).
+Escreve o comprimento de bytes do arquivo para o buffer do ArrayBuffer na posição do byte (wrapper para libc fwrite).
 
 ```js
 write(buffer, position, length);
@@ -274,7 +274,7 @@ write(buffer, position, length);
 
 ### getline
 
-Return the next line from the file, assuming UTF-8 encoding, excluding the trailing line feed.
+Retorna a próxima linha do arquivo, assumindo codificação UTF-8, excluindo a quebra de linha no final.
 
 ```js
 getline();
@@ -282,15 +282,14 @@ getline();
 
 ### readAsString
 
-Read max_size bytes from the file and return them as a string assuming UTF-8 encoding. If max_size is not present, the file is read up its end.
-
+Lê um número máximo de bytes do arquivo e retorna como uma string UTF-8. Se max_size não for especificado, lê até o final do arquivo.
 ```js
 readAsString(max_size = undefined);
 ```
 
 ### getByte
 
-Return the next byte from the file. Return -1 if the end of file is reached.
+Retorna o próximo byte do arquivo. Retorna -1 se o final do arquivo for atingido.
 
 ```js
 getByte();
@@ -298,7 +297,7 @@ getByte();
 
 ### putByte
 
-Write one byte to the file.
+Escreve um byte no arquivo.
 
 ```js
 putByte(c);

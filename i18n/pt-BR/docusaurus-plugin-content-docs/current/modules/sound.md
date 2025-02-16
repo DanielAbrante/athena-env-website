@@ -1,6 +1,6 @@
 # Sound
 
-Sound Métodos, supporting WAV, OGG and ADPCM.
+Métodos de som, suportando WAV, OGG e ADPCM.
 
 ## Métodos
 
@@ -10,7 +10,7 @@ Sound Métodos, supporting WAV, OGG and ADPCM.
 Sound.setVolume(volume, slot?);
 ```
 
-*If slot is specified, it will change ADPCM slot volume, else it will change master volume.
+Se o slot for especificado, ele alterará o volume do slot ADPCM; caso contrário, alterará o volume master.
 
 ### load
 
@@ -24,7 +24,7 @@ const audio = Sound.load(path);
 Sound.play(audio, slot?);
 ```
 
-*ADPCM: If slot isn't specified, it will use 0.
+*ADPCM: Se o slot não for especificado, será utilizado o slot 0.
 
 ### free
 
@@ -38,7 +38,7 @@ Sound.free(audio);
 const playing = Sound.isPlaying();
 ```
 
-*Doesn't apply for ADPCM
+*Não se aplica para ADPCM.
 
 ### duration
 
@@ -52,7 +52,7 @@ const msec = Sound.duration();
 Sound.repeat(false);
 ```
 
-*Doesn't apply for ADPCM
+*Não se aplica para ADPCM.
 
 ### pause
 
@@ -60,7 +60,7 @@ Sound.repeat(false);
 Sound.pause(audio);
 ```
 
-*Doesn't apply for ADPCM
+*Não se aplica para ADPCM.
 
 ### resume
 
@@ -68,7 +68,7 @@ Sound.pause(audio);
 Sound.resume(audio);
 ```
 
-*Doesn't apply for ADPCM
+*Não se aplica para ADPCM.
 
 ### deinit
 
