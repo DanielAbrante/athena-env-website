@@ -37,7 +37,7 @@ Render.setView(aspect, fov?);
 Returns a vertex to build a 3D mesh. It should be used to create vertex arrays.  
 
 ```js
-Render.vertex(x, y, z, n1, n2, n3, s, t, r, g, b, a);
+Render.vertexList(x, y, z, n1, n2, n3, s, t, r, g, b, a);
 ```
 
 - **x, y, z**: Vertex position on 3D world.  
